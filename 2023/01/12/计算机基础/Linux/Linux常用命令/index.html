@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Linux常用命令 | Hexo</title>
+  <meta name="description" content="参考  ls: list  ls -a 列出目录所有文件，包含以.开始的隐藏文件 ls -A 列出除.及…的其它文件 ls -r 反序排列 ls -t 以文件修改时间排序 ls -S 以文件大小排序 ls -h 以易读大小显示 ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来 ls -l t* 列出当前目录中所有以&quot;t&quot;开头的目录的详细内容 ls -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="https://minteen.github.io/2023/01/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="这里空荡荡的...">
+<meta property="og:description" content="参考  ls: list  ls -a 列出目录所有文件，包含以.开始的隐藏文件 ls -A 列出除.及…的其它文件 ls -r 反序排列 ls -t 以文件修改时间排序 ls -S 以文件大小排序 ls -h 以易读大小显示 ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来 ls -l t* 列出当前目录中所有以&quot;t&quot;开头的目录的详细内容 ls -">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-12T10:08:00.000Z">
+<meta property="article:modified_time" content="2024-02-16T12:42:36.881Z">
+<meta property="article:author" content="Minteen">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://minteen.github.io/2023/01/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="这里空荡荡的..." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/minteen" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Python developer &amp; Cybersecurity engineer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Tianjin, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/minteen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python%E5%9F%BA%E7%A1%80/">python基础</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%88%B0%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">从深度学习到图神经网络</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+
+    
+      
+    
+  </div>
+</aside>
+
+  
+  
+  <aside class="sidebar sidebar-toc collapse   in  " id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">Catalogue</h3>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ls-list"><span class="toc-number">1.</span> <span class="toc-text"> ls: list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cd-changedirectory"><span class="toc-number">2.</span> <span class="toc-text"> cd: changeDirectory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwd"><span class="toc-number">3.</span> <span class="toc-text"> pwd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mkdir"><span class="toc-number">4.</span> <span class="toc-text"> mkdir</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rm"><span class="toc-number">5.</span> <span class="toc-text"> rm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rmdir"><span class="toc-number">6.</span> <span class="toc-text"> rmdir</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mv"><span class="toc-number">7.</span> <span class="toc-text"> mv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cp"><span class="toc-number">8.</span> <span class="toc-text"> cp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cat"><span class="toc-number">9.</span> <span class="toc-text"> cat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#more"><span class="toc-number">10.</span> <span class="toc-text"> more</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#less"><span class="toc-number">11.</span> <span class="toc-text"> less</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tail"><span class="toc-number">12.</span> <span class="toc-text"> tail</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#head"><span class="toc-number">13.</span> <span class="toc-text"> head</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#which"><span class="toc-number">14.</span> <span class="toc-text"> which</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#whereis"><span class="toc-number">15.</span> <span class="toc-text"> whereis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#locate"><span class="toc-number">16.</span> <span class="toc-text"> locate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find"><span class="toc-number">17.</span> <span class="toc-text"> find</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chmod"><span class="toc-number">18.</span> <span class="toc-text"> chmod</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar"><span class="toc-number">19.</span> <span class="toc-text"> tar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chown"><span class="toc-number">20.</span> <span class="toc-text"> chown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#df"><span class="toc-number">21.</span> <span class="toc-text"> df</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#du"><span class="toc-number">22.</span> <span class="toc-text"> du</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ln"><span class="toc-number">23.</span> <span class="toc-text"> ln</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date"><span class="toc-number">24.</span> <span class="toc-text"> date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cal"><span class="toc-number">25.</span> <span class="toc-text"> cal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep"><span class="toc-number">26.</span> <span class="toc-text"> grep</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wc"><span class="toc-number">27.</span> <span class="toc-text"> wc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ps"><span class="toc-number">28.</span> <span class="toc-text"> ps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#top"><span class="toc-number">29.</span> <span class="toc-text"> top</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kill"><span class="toc-number">30.</span> <span class="toc-text"> kill</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#free"><span class="toc-number">31.</span> <span class="toc-text"> free</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-计算机基础/Linux/Linux常用命令" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux常用命令
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2023/01/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+	  <time datetime="2023-01-12T10:08:00.000Z" itemprop="datePublished">2023-01-12</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/01/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/linux-common-command-2.html">参考</a></p>
+<h2 id="ls-list"><a class="markdownIt-Anchor" href="#ls-list"></a> ls: list</h2>
+<ul>
+<li>ls -a 列出目录所有文件，包含以.开始的隐藏文件</li>
+<li>ls -A 列出除.及…的其它文件</li>
+<li>ls -r 反序排列</li>
+<li>ls -t 以文件修改时间排序</li>
+<li>ls -S 以文件大小排序</li>
+<li>ls -h 以易读大小显示</li>
+<li>ls -l 除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来</li>
+<li>ls -l t* 列出当前目录中所有以&quot;t&quot;开头的目录的详细内容</li>
+<li>ls -lhrt 按易读方式按时间反序排序，并显示文件详细信息</li>
+<li>ls | sed “s:^:`pwd`:” 列出文件绝对路径（不包含隐藏文件）</li>
+<li>find $pwd -maxdepth 1 | xargs ls -ld 列出文件绝对路径（包含隐藏文件）</li>
+</ul>
+<h2 id="cd-changedirectory"><a class="markdownIt-Anchor" href="#cd-changedirectory"></a> cd: changeDirectory</h2>
+<ul>
+<li>cd ~</li>
+<li>cd - 进入上一次工作路径</li>
+<li>cd !$ 把上个命令的参数作为cd参数使用</li>
+</ul>
+<h2 id="pwd"><a class="markdownIt-Anchor" href="#pwd"></a> pwd</h2>
+<ul>
+<li>pwd -P 查看软链接的实际路径</li>
+</ul>
+<h2 id="mkdir"><a class="markdownIt-Anchor" href="#mkdir"></a> mkdir</h2>
+<h2 id="rm"><a class="markdownIt-Anchor" href="#rm"></a> rm</h2>
+<ul>
+<li>rm – -f* 删除以 -f 开头的文件</li>
+</ul>
+<h2 id="rmdir"><a class="markdownIt-Anchor" href="#rmdir"></a> rmdir</h2>
+<h2 id="mv"><a class="markdownIt-Anchor" href="#mv"></a> mv</h2>
+<ul>
+<li>mv * …/ 移动当前文件夹下的所有文件到上一级目录</li>
+</ul>
+<h2 id="cp"><a class="markdownIt-Anchor" href="#cp"></a> cp</h2>
+<ul>
+<li>-i 提示</li>
+<li>-r 复制目录及目录内所有项目</li>
+<li>-a 复制的文件与原文件时间一样</li>
+</ul>
+<h2 id="cat"><a class="markdownIt-Anchor" href="#cat"></a> cat</h2>
+<ul>
+<li>cat filename 一次显示整个文件</li>
+<li>cat &gt; filename 从键盘创建一个文件</li>
+<li>cat file1 file2 &gt; file 将几个文件合并为一个文件</li>
+</ul>
+<h2 id="more"><a class="markdownIt-Anchor" href="#more"></a> more</h2>
+<ul>
+<li>功能类似于 cat, more 会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示。</li>
+</ul>
+<h2 id="less"><a class="markdownIt-Anchor" href="#less"></a> less</h2>
+<ul>
+<li>less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。</li>
+</ul>
+<h2 id="tail"><a class="markdownIt-Anchor" href="#tail"></a> tail</h2>
+<ul>
+<li>用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件</li>
+<li>ping 127.0.0.1 &gt; ping.log &amp; tail -f ping.log</li>
+</ul>
+<h2 id="head"><a class="markdownIt-Anchor" href="#head"></a> head</h2>
+<h2 id="which"><a class="markdownIt-Anchor" href="#which"></a> which</h2>
+<ul>
+<li>查看可执行文件的位置</li>
+</ul>
+<h2 id="whereis"><a class="markdownIt-Anchor" href="#whereis"></a> whereis</h2>
+<ul>
+<li>只能用于程序名的搜索，而且只搜索二进制文件（参数-b）、man说明文件（参数-m）和源代码文件（参数-s）</li>
+<li>whereis -s locate 查找 locate 的源码文件</li>
+<li>whereis -m locate 查找 lcoate 的帮助文件</li>
+</ul>
+<h2 id="locate"><a class="markdownIt-Anchor" href="#locate"></a> locate</h2>
+<h2 id="find"><a class="markdownIt-Anchor" href="#find"></a> find</h2>
+<h2 id="chmod"><a class="markdownIt-Anchor" href="#chmod"></a> chmod</h2>
+<h2 id="tar"><a class="markdownIt-Anchor" href="#tar"></a> tar</h2>
+<h2 id="chown"><a class="markdownIt-Anchor" href="#chown"></a> chown</h2>
+<h2 id="df"><a class="markdownIt-Anchor" href="#df"></a> df</h2>
+<h2 id="du"><a class="markdownIt-Anchor" href="#du"></a> du</h2>
+<h2 id="ln"><a class="markdownIt-Anchor" href="#ln"></a> ln</h2>
+<h2 id="date"><a class="markdownIt-Anchor" href="#date"></a> date</h2>
+<h2 id="cal"><a class="markdownIt-Anchor" href="#cal"></a> cal</h2>
+<h2 id="grep"><a class="markdownIt-Anchor" href="#grep"></a> grep</h2>
+<h2 id="wc"><a class="markdownIt-Anchor" href="#wc"></a> wc</h2>
+<h2 id="ps"><a class="markdownIt-Anchor" href="#ps"></a> ps</h2>
+<h2 id="top"><a class="markdownIt-Anchor" href="#top"></a> top</h2>
+<h2 id="kill"><a class="markdownIt-Anchor" href="#kill"></a> kill</h2>
+<h2 id="free"><a class="markdownIt-Anchor" href="#free"></a> free</h2>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://minteen.github.io/2023/01/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/Linux/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux常用命令" target="_blank" rel="external">https://minteen.github.io/2023/01/12/计算机基础/Linux/Linux常用命令/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/minteen" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/minteen" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Python developer &amp; Cybersecurity engineer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2023/07/16/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E4%BB%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%88%B0%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E5%9B%BE%E4%B8%8A%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="第一章：图上的深度学习"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2023/01/01/hello-world/" title="Hello World"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn " data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="Catalogue" role="button">    <span>[&nbsp;</span><span>Catalogue</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/minteen" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/minteen" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'sCOwj60s9S6lz2XJAs8rPSYO-gzGzoHsz',
+    appKey: '7w2ugX06WL9ZghUpYhcORU8E',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
