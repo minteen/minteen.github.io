@@ -19,6 +19,69 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://minteen.github.io/tags/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/repository/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/categories/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/links/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/books/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/about/index.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://minteen.github.io/404.html</loc>
+    
+    <lastmod>2024-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://minteen.github.io/</loc>
