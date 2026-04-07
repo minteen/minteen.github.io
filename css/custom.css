@@ -1,0 +1,75 @@
+/* 鼠标悬浮显示/隐藏效果 */
+.ad-hide {
+  background-color: black;
+  color: transparent;
+  border-radius: 10px;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+}
+
+.ad-hide:hover {
+  color: white;
+}
+
+/* 警告提示框 */
+.ad-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+/* 信息提示框 */
+.ad-info {
+  background-color: #d1ecf1;
+  border: 1px solid #17a2b8;
+  border-left: 4px solid #17a2b8;
+  color: #0c5460;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+/* 成功提示框 */
+.ad-success {
+  background-color: #d4edda;
+  border: 1px solid #28a745;
+  border-left: 4px solid #28a745;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+/* 危险提示框 */
+.ad-danger {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+}
+
+/* 侧边备注样式 */
+.ad-note {
+  background-color: #f8f9fa;
+  border: 1px dashed #6c757d;
+  padding: 10px 14px;
+  font-size: 0.9em;
+  color: #495057;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+/* 高亮强调样式 */
+.ad-highlight {
+  background: linear-gradient(120deg, #fff9c4 0%, #fff59d 100%);
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline;
+}
