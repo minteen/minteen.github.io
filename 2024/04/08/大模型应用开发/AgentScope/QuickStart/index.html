@@ -1,413 +1,238 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <!-- SEO and Meta Tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Title -->
-
-<title>AgentScope QuickStart - NoBody</title>
-
-<!-- Description -->
-
-
-<meta name="description" content="教程概述目标场景假设你是一名计算机科学工程师，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：
-
-搜索最新的学术论文和技术新闻
-基于下载的论文PDF进行问答
-记住你的研究兴趣和偏好，并在未来的对话中主动利用这些信息
-
-核心组件对照表
-
-
-功能
-对应组件
-
-
-
-创建和配">
-
-
-<!-- Keywords -->
-
-
-<!-- Author -->
-
-<meta name="author" content="Your Name">
-
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://minteen.github.io/2024/04/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/AgentScope/QuickStart/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="article">
-<meta property="og:title" content="AgentScope QuickStart - NoBody">
-<meta property="og:url" content="https://minteen.github.io/2024/04/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/AgentScope/QuickStart/">
-<meta property="og:site_name" content="NoBody">
-
-<meta property="og:description" content="教程概述目标场景假设你是一名计算机科学工程师，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：
-
-搜索最新的学术论文和技术新闻
-基于下载的论文PDF进行问答
-记住你的研究兴趣和偏好，并在未来的对话中主动利用这些信息
-
-核心组件对照表
-
-
-功能
-对应组件
-
-
-
-创建和配">
-
-
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AgentScope QuickStart - NoBody">
-
-<meta name="twitter:description" content="教程概述目标场景假设你是一名计算机科学工程师，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：
-
-搜索最新的学术论文和技术新闻
-基于下载的论文PDF进行问答
-记住你的研究兴趣和偏好，并在未来的对话中主动利用这些信息
-
-核心组件对照表
-
-
-功能
-对应组件
-
-
-
-创建和配">
-
-
-
-<!-- Article specific meta -->
-
-<meta property="article:published_time" content="2024-04-07T16:00:00.000Z">
-
-<meta property="article:modified_time" content="2026-04-08T15:53:23.271Z">
-
-
-
-
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon180.png">
-
-<!-- RSS Feed -->
-
-
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
-  
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    // Suppress Tailwind CDN production warning in development
-    if (typeof tailwind !== 'undefined') {
-      tailwind.config = {
-        corePlugins: {
-          preflight: false,
-        }
-      }
-    }
-  </script>
-  
-  
-  <!-- Theme CSS -->
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            AgentScope QuickStart |
+        
+        Keep Theme
+    </title>
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/css/code-blocks.css">
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
-<link rel="stylesheet" href="/css/enhanced-code-blocks.css">
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
 
-  
-<link rel="stylesheet" href="/css/cover-images.css">
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
 
-  
-<link rel="stylesheet" href="/css/chinese-text-fix.css">
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
 
-  
-  <!-- Theme Colors -->
-  <style type="text/tailwindcss">
-    :root {
-      
-      --primary-color: #0c7ff2;
-      
-      --secondary-color: #f3f4f6;
-      
-      --background-color: #ffffff;
-      
-      --text-primary-color: #111827;
-      
-      --text-secondary-color: #6b7280;
-      
-      --border-color: #e5e7eb;
-      
-    }
-    body {
-      font-family: 'Newsreader', serif;
-      background-color: var(--background-color);
-      color: var(--text-primary-color);
-    }
-  </style>
-  
-  <!-- Mobile Menu Script -->
-  <script src="/js/mobile-menu.js" defer></script>
-  
-  <!-- Fixed Header Script -->
-  <script src="/js/fixed-header.js" defer></script>
-  
-  <!-- Code Copy Script -->
-  <script src="/js/code-copy.js" defer></script>
-  
-  <!-- Reading Progress Script -->
-  <script src="/js/reading-progress.js" defer></script>
-  
-  <!-- Theme Switcher Script -->
-  <script src="/js/theme-switcher.js" defer></script>
-  
-  <!-- Image Optimizer Script -->
-  <script src="/js/image-optimizer.js" defer></script>
-  
-  <!-- Enhanced Search Script -->
-  <script src="/js/enhanced-search.js" defer></script>
-  
-  <!-- Table of Contents Script -->
-  <script src="/js/table-of-contents.js" defer></script>
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"minteen.github.io","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Keep Theme","author":"Keep Team","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
 <meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/css/custom.css">
 </head>
-<body class="bg-[var(--background-color)] text-[var(--text-primary-color)]">
-  <div class="min-h-screen flex flex-col">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm fixed">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
-      <!-- Logo and Title -->
-      <div class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-        <a href="/" class="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity duration-200" title="回到首页">
-          
-            
-              <!-- 默认SVG Logo -->
-              <svg class="h-6 w-6 sm:h-8 sm:w-8 text-[var(--primary-color)] flex-shrink-0" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-              </svg>
-            
-          
-          <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight truncate">build myself, build the world</h1>
-        </a>
-      </div>
-      
-      <!-- Navigation -->
-      <div class="flex items-center gap-2">
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-2">
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/">
-              Home
-            </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/categories/">
-              Categories
-            </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/tags/">
-              Tags
-            </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/about/">
-              About
-            </a>
-          
-          
-          <!-- Desktop Search Button -->
-          <button id="search-toggle" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 flex items-center gap-2 border-0 bg-transparent relative group" title="搜索 (Ctrl+K)">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <span class="hidden xl:inline">搜索</span>
-          </button>
-          
-          <!-- Desktop Theme Switch Button -->
-          <button id="desktop-theme-switcher" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 flex items-center gap-2 border-0 bg-transparent relative group" title="切换主题">
-            <span id="desktop-theme-icon" class="text-base flex-shrink-0">🌓</span>
-            <span class="hidden xl:inline" id="desktop-theme-text">主题</span>
-          </button>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex-shrink-0">
-          <button id="mobile-menu-button" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 border-0 bg-transparent relative group" title="菜单">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      
-      <!-- Mobile Navigation Menu -->
-      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-800 border-t border-[var(--border-color)] shadow-2xl rounded-b-2xl z-40">
-        <div class="px-4 py-6 space-y-3">
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/">
-              <div class="flex items-center justify-between">
-                <span>Home</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/categories/">
-              <div class="flex items-center justify-between">
-                <span>Categories</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/tags/">
-              <div class="flex items-center justify-between">
-                <span>Tags</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/about/">
-              <div class="flex items-center justify-between">
-                <span>About</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-          
-          <!-- 移动端搜索选项 -->
-          <button id="mobile-search-toggle" class="block w-full px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 text-left relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95">
-            <div class="flex items-center justify-between">
-              <span class="flex items-center gap-3">
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-                <span>搜索</span>
-              </span>
-              <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </div>
-            <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-          </button>
-          
-          <!-- 移动端主题切换选项 -->
-          <div class="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
-            <button id="mobile-theme-switcher" class="block w-full px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 text-left relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95">
-              <div class="flex items-center justify-between">
-                <span class="flex items-center gap-3">
-                  <span id="mobile-theme-icon" class="flex-shrink-0 text-lg">🌓</span>
-                  <span id="mobile-theme-text">主题：跟随系统</span>
-                </span>
-                <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-              <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+
+
+<body>
+<div class="progress-bar-container">
     
-    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-      <article class="max-w-4xl mx-auto">
-        <!-- Post Header -->
-        <header class="mb-12 relative">
-          <!-- Decorative background -->
-          <div class="absolute inset-0 bg-gradient-to-r from-[var(--primary-color)]/5 to-transparent rounded-2xl -z-10"></div>
-          
-          
-          <div class="relative z-10 p-6 sm:p-8">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal mb-6 bg-gradient-to-r from-[var(--text-primary-color)] to-[var(--primary-color)] bg-clip-text text-transparent">
-              AgentScope QuickStart
-            </h1>
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
             
-            <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-[var(--text-secondary-color)] text-sm bg-[var(--background-color)]/80 backdrop-blur-sm rounded-lg p-4 border border-[var(--border-color)]/50">
-            <time datetime="2024-04-07T16:00:00.000Z">
-              April 08, 2024
-            </time>
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
             
-              
-              
-              
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
             </div>
-          </div>
-        </header>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        AgentScope QuickStart
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Keep Team</span>
+                                
+                                    <span class="author-badge">Lv1</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
         
-        <!-- Post Content -->
-        <div class="prose prose-lg max-w-none relative">
-          <!-- Reading progress indicator -->
-          <div class="reading-progress-container">
-            <div class="reading-progress-bar"></div>
-          </div>
-          
-          <!-- Content with enhanced styling -->
-          <div class="content-wrapper bg-[var(--background-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm border border-[var(--border-color)]/30">
-            <h2 id="教程概述"><a href="#教程概述" class="headerlink" title="教程概述"></a>教程概述</h2><h3 id="目标场景"><a href="#目标场景" class="headerlink" title="目标场景"></a>目标场景</h3><p>假设你是一名<strong>计算机科学工程师</strong>，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：</p>
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2024-04-08 00:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Apr 09 2026 00:03:39 GMT+0800">2026-04-09 00:03:39</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/agent/">agent</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h2 id="教程概述"><a href="#教程概述" class="headerlink" title="教程概述"></a>教程概述</h2><h3 id="目标场景"><a href="#目标场景" class="headerlink" title="目标场景"></a>目标场景</h3><p>假设你是一名<strong>计算机科学工程师</strong>，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：</p>
 <ul>
 <li>搜索最新的学术论文和技术新闻</li>
 <li>基于下载的论文PDF进行问答</li>
@@ -464,8 +289,8 @@
 
 <p>创建配备工具的Agent并测试。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ==================== 创建配备工具的Agent ====================</span></span><br><span class="line">research_agent = ReActAgent(</span><br><span class="line">    name=<span class="string">&quot;ResearchAssistant&quot;</span>,</span><br><span class="line">    sys_prompt=(</span><br><span class="line">        <span class="string">&quot;你是一名为对AI和Transformer技术感兴趣的计算机工程师服务的研究助手。&quot;</span></span><br><span class="line">        <span class="string">&quot;当用户的问题需要搜索论文或计算时，主动使用适当的工具。&quot;</span></span><br><span class="line">        <span class="string">&quot;使用take_notes工具记录重要信息。&quot;</span></span><br><span class="line">    ),</span><br><span class="line">    model=model,</span><br><span class="line">    formatter=DashScopeChatFormatter(),</span><br><span class="line">    memory=InMemoryMemory(),</span><br><span class="line">    toolkit=toolkit,  <span class="comment"># 传入我们创建的工具包</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_mock_tools</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示配备模拟工具的Agent&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># Agent会自动决定调用search_papers</span></span><br><span class="line">    <span class="keyword">await</span> research_agent(</span><br><span class="line">        Msg(<span class="string">&quot;User&quot;</span>, <span class="string">&quot;帮我搜索关于Transformer架构的论文&quot;</span>, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># Agent会调用execute_python_code</span></span><br><span class="line">    <span class="keyword">await</span> research_agent(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;User&quot;</span>,</span><br><span class="line">            <span class="string">&quot;请计算BERT-base的参数量：12层 * 768维 * 768维 * 4，并返回结果&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># Agent会调用take_notes</span></span><br><span class="line">    <span class="keyword">await</span> research_agent(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;User&quot;</span>,</span><br><span class="line">            <span class="string">&quot;请记笔记：Transformer的核心创新是自注意力机制，&quot;</span></span><br><span class="line">            <span class="string">&quot;它实现了序列数据的并行处理&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">asyncio.run(demo_mock_tools())</span><br></pre></td></tr></table></figure>
-<h3 id="2-2-连接真实搜索-Tavily-MCP（可选）"><a href="#2-2-连接真实搜索-Tavily-MCP（可选）" class="headerlink" title="2.2 连接真实搜索 - Tavily MCP（可选）"></a>2.2 连接真实搜索 - Tavily MCP（可选）</h3><p><a target="_blank" rel="noopener" href="https://modelcontextprotocol.io/">MCP（Model Context Protocol）</a>是一个标准化的工具协议。AgentScope原生支持MCP，可以与各种外部服务即插即用集成。</p>
-<p><a target="_blank" rel="noopener" href="https://tavily.com/">Tavily</a>是一个为AI Agent设计的搜索API，提供MCP Server。连接后，Agent将获得真实的互联网搜索能力。</p>
+<h3 id="2-2-连接真实搜索-Tavily-MCP（可选）"><a href="#2-2-连接真实搜索-Tavily-MCP（可选）" class="headerlink" title="2.2 连接真实搜索 - Tavily MCP（可选）"></a>2.2 连接真实搜索 - Tavily MCP（可选）</h3><p><a class="link"   target="_blank" rel="noopener" href="https://modelcontextprotocol.io/" >MCP（Model Context Protocol）<i class="fas fa-external-link-alt"></i></a>是一个标准化的工具协议。AgentScope原生支持MCP，可以与各种外部服务即插即用集成。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://tavily.com/" >Tavily<i class="fas fa-external-link-alt"></i></a>是一个为AI Agent设计的搜索API，提供MCP Server。连接后，Agent将获得真实的互联网搜索能力。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> agentscope.mcp <span class="keyword">import</span> StdIOStatefulClient</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_tavily_mcp</span>():</span><br><span class="line">    <span class="comment"># 创建Tavily MCP客户端</span></span><br><span class="line">    tavily_client = StdIOStatefulClient(</span><br><span class="line">        name=<span class="string">&quot;tavily&quot;</span>,</span><br><span class="line">        command=<span class="string">&quot;npx&quot;</span>,</span><br><span class="line">        args=[<span class="string">&quot;-y&quot;</span>, <span class="string">&quot;tavily-mcp@latest&quot;</span>],</span><br><span class="line">        env=&#123;<span class="string">&quot;TAVILY_API_KEY&quot;</span>: os.environ[<span class="string">&quot;TAVILY_API_KEY&quot;</span>]&#125;,</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 连接到MCP服务器</span></span><br><span class="line">    <span class="keyword">await</span> tavily_client.connect()</span><br><span class="line">    <span class="comment"># 创建工具包并注册MCP工具</span></span><br><span class="line">    mcp_toolkit = Toolkit()</span><br><span class="line">    <span class="keyword">await</span> mcp_toolkit.register_mcp_client(tavily_client)</span><br><span class="line">    mcp_toolkit.register_tool_function(execute_python_code)</span><br><span class="line">    mcp_toolkit.register_tool_function(take_notes)</span><br><span class="line">    <span class="comment"># 创建Agent</span></span><br><span class="line">    mcp_agent = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;ResearchAssistant&quot;</span>,</span><br><span class="line">        sys_prompt=<span class="string">&quot;你是一个使用搜索工具获取最新信息的研究助手。&quot;</span>,</span><br><span class="line">        model=model,</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=mcp_toolkit,</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 使用真实搜索</span></span><br><span class="line">    <span class="keyword">await</span> mcp_agent(</span><br><span class="line">        Msg(<span class="string">&quot;User&quot;</span>, <span class="string">&quot;搜索2025年Transformer架构的最新改进&quot;</span>, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 关闭客户端</span></span><br><span class="line">    <span class="keyword">await</span> tavily_client.close()</span><br><span class="line">asyncio.run(demo_tavily_mcp())</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="第三部分：记忆系统"><a href="#第三部分：记忆系统" class="headerlink" title="第三部分：记忆系统"></a>第三部分：记忆系统</h2><p>记忆使Agent不仅能记住”刚才说了什么”（短期记忆），还能在会话间记住”你是谁”（长期记忆）。</p>
@@ -499,7 +324,7 @@
 <h4 id="记忆持久化"><a href="#记忆持久化" class="headerlink" title="记忆持久化"></a>记忆持久化</h4><p>导出和恢复记忆状态，实现跨进程会话恢复。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_persistence</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;记忆持久化：导出 → 保存到文件 → 恢复&quot;&quot;&quot;</span></span><br><span class="line">    persist_memory = InMemoryMemory()</span><br><span class="line">    <span class="keyword">await</span> persist_memory.add(</span><br><span class="line">        Msg(<span class="string">&quot;User&quot;</span>, <span class="string">&quot;我的研究方向是NLP和Transformer&quot;</span>, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 获取记忆状态字典</span></span><br><span class="line">    state = persist_memory.state_dict()</span><br><span class="line">    state_file = <span class="string">&quot;/tmp/memory_state.json&quot;</span></span><br><span class="line">    <span class="comment"># 保存到文件</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(state_file, <span class="string">&quot;w&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        json.dump(state, f, ensure_ascii=<span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;状态已保存到：<span class="subst">&#123;state_file&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># 创建新的记忆实例并恢复</span></span><br><span class="line">    new_memory = InMemoryMemory()</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(state_file, <span class="string">&quot;r&quot;</span>, encoding=<span class="string">&quot;utf-8&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        new_memory.load_state_dict(json.load(f))</span><br><span class="line">    <span class="comment"># 验证恢复的消息</span></span><br><span class="line">    restored = <span class="keyword">await</span> new_memory.get_memory()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;恢复了<span class="subst">&#123;<span class="built_in">len</span>(restored)&#125;</span>条消息&quot;</span>)</span><br><span class="line">asyncio.run(demo_persistence())</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-2-长期记忆-记住”你是谁”"><a href="#3-2-长期记忆-记住”你是谁”" class="headerlink" title="3.2 长期记忆 - 记住”你是谁”"></a>3.2 长期记忆 - 记住”你是谁”</h3><p>短期记忆只在单个会话中持久存在。基于<a target="_blank" rel="noopener" href="https://github.com/agentscope-ai/ReMe">ReMe</a>框架的<code>ReMePersonalLongTermMemory</code>可以跨会话存储和检索用户<strong>画像信息</strong>。</p>
+<h3 id="3-2-长期记忆-记住”你是谁”"><a href="#3-2-长期记忆-记住”你是谁”" class="headerlink" title="3.2 长期记忆 - 记住”你是谁”"></a>3.2 长期记忆 - 记住”你是谁”</h3><p>短期记忆只在单个会话中持久存在。基于<a class="link"   target="_blank" rel="noopener" href="https://github.com/agentscope-ai/ReMe" >ReMe<i class="fas fa-external-link-alt"></i></a>框架的<code>ReMePersonalLongTermMemory</code>可以跨会话存储和检索用户<strong>画像信息</strong>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> agentscope.memory <span class="keyword">import</span> ReMePersonalLongTermMemory</span><br><span class="line"><span class="keyword">from</span> agentscope.embedding <span class="keyword">import</span> DashScopeTextEmbedding</span><br><span class="line"><span class="comment"># ==================== 创建长期记忆实例 ====================</span></span><br><span class="line">long_term_memory = ReMePersonalLongTermMemory(</span><br><span class="line">    agent_name=<span class="string">&quot;ResearchAssistant&quot;</span>,       <span class="comment"># Agent名称</span></span><br><span class="line">    user_name=<span class="string">&quot;researcher&quot;</span>,                <span class="comment"># 用户名称</span></span><br><span class="line">    <span class="comment"># 使用的LLM模型（用于记忆的理解和总结）</span></span><br><span class="line">    model=DashScopeChatModel(</span><br><span class="line">        model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">        api_key=os.environ[<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>],</span><br><span class="line">        stream=<span class="literal">False</span>,</span><br><span class="line">    ),</span><br><span class="line">    <span class="comment"># 嵌入模型（用于向量检索）</span></span><br><span class="line">    embedding_model=DashScopeTextEmbedding(</span><br><span class="line">        model_name=<span class="string">&quot;text-embedding-v4&quot;</span>,</span><br><span class="line">        api_key=os.environ[<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>],</span><br><span class="line">        dimensions=<span class="number">1024</span>,</span><br><span class="line">    ),</span><br><span class="line">    vector_store_dir=<span class="string">&quot;./memory_store&quot;</span>,     <span class="comment"># 向量存储目录</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_long_term_memory</span>():</span><br><span class="line">    <span class="comment"># 使用async with管理生命周期</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> long_term_memory:</span><br><span class="line">        <span class="comment"># ==================== 记录用户画像 ====================</span></span><br><span class="line">        <span class="keyword">await</span> long_term_memory.record_to_memory(</span><br><span class="line">            thinking=<span class="string">&quot;记录用户的背景和研究兴趣&quot;</span>,</span><br><span class="line">            content=[</span><br><span class="line">                <span class="string">&quot;用户是一名从事LLM Agent开发的计算机科学工程师&quot;</span>,</span><br><span class="line">                <span class="string">&quot;用户对大语言模型和Transformer架构非常感兴趣&quot;</span>,</span><br><span class="line">                <span class="string">&quot;用户正在学习《Attention Is All You Need》论文&quot;</span>,</span><br><span class="line">                <span class="string">&quot;用户更喜欢使用Python进行技术实验&quot;</span>,</span><br><span class="line">            ],</span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># ==================== 检索信息 ====================</span></span><br><span class="line">        result = <span class="keyword">await</span> long_term_memory.retrieve_from_memory(</span><br><span class="line">            keywords=[<span class="string">&quot;研究兴趣&quot;</span>, <span class="string">&quot;技术背景&quot;</span>],  <span class="comment"># 检索关键词</span></span><br><span class="line">            limit=<span class="number">3</span>,                              <span class="comment"># 返回结果数量</span></span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># 打印检索结果</span></span><br><span class="line">        <span class="keyword">for</span> block <span class="keyword">in</span> result.content:</span><br><span class="line">            <span class="built_in">print</span>(block[<span class="string">&quot;text&quot;</span>])</span><br></pre></td></tr></table></figure>
 
 <p>与Agent集成时，推荐使用<code>agent_control</code>模式，让Agent自主管理记忆：</p>
@@ -518,76 +343,256 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_agentic_rag</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Agentic RAG：Agent使用retrieve_knowledge工具&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># ==================== 创建工具包 ====================</span></span><br><span class="line">    rag_toolkit = Toolkit()</span><br><span class="line">    rag_toolkit.register_tool_function(search_papers)</span><br><span class="line">    rag_toolkit.register_tool_function(execute_python_code)</span><br><span class="line">    <span class="comment"># 注册知识检索工具，并添加描述</span></span><br><span class="line">    rag_toolkit.register_tool_function(</span><br><span class="line">        knowledge.retrieve_knowledge,</span><br><span class="line">        func_description=(</span><br><span class="line">            <span class="string">&quot;从Transformer论文知识库中检索相关信息。&quot;</span></span><br><span class="line">            <span class="string">&quot;当用户询问技术细节（如Transformer架构、自注意力、&quot;</span></span><br><span class="line">            <span class="string">&quot;多头注意力等）时使用此工具。&quot;</span></span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># ==================== 创建RAG Agent ====================</span></span><br><span class="line">    rag_agent = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;ResearchAssistant&quot;</span>,</span><br><span class="line">        sys_prompt=(</span><br><span class="line">            <span class="string">&quot;你是一名为对AI感兴趣的计算机工程师服务的研究助手。&quot;</span></span><br><span class="line">            <span class="string">&quot;你有一个基于Transformer论文构建的知识库。&quot;</span></span><br><span class="line">            <span class="string">&quot;当用户询问技术细节时，首先使用retrieve_knowledge搜索论文内容，&quot;</span></span><br><span class="line">            <span class="string">&quot;然后基于检索结果回答。&quot;</span></span><br><span class="line">            <span class="string">&quot;如果知识库中不包含相关信息，请如实说明。&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        model=model,</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=rag_toolkit,</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># ==================== 测试RAG功能 ====================</span></span><br><span class="line">    <span class="comment"># 询问多头注意力机制</span></span><br><span class="line">    <span class="keyword">await</span> rag_agent(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;User&quot;</span>,</span><br><span class="line">            <span class="string">&quot;Transformer中的多头注意力是如何工作的？&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 询问位置编码方法</span></span><br><span class="line">    <span class="keyword">await</span> rag_agent(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;User&quot;</span>,</span><br><span class="line">            <span class="string">&quot;论文使用什么方法进行位置编码？&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">asyncio.run(demo_agentic_rag())</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="第五部分：完整的研究助手"><a href="#第五部分：完整的研究助手" class="headerlink" title="第五部分：完整的研究助手"></a>第五部分：完整的研究助手</h2><h2 id="集成工具-记忆-知识库，构建最终版本。-完整研究助手架构-组件-说明-——-——-模型-qwen-max-短期记忆-InMemoryMemory-长期记忆-LongTermMemory-工具包-search-papers-·-execute-python-code-·-take-notes-·-retrieve-knowledge-·-record-to-memory-·-retrieve-from-memory"><a href="#集成工具-记忆-知识库，构建最终版本。-完整研究助手架构-组件-说明-——-——-模型-qwen-max-短期记忆-InMemoryMemory-长期记忆-LongTermMemory-工具包-search-papers-·-execute-python-code-·-take-notes-·-retrieve-knowledge-·-record-to-memory-·-retrieve-from-memory" class="headerlink" title="集成工具 + 记忆 + 知识库，构建最终版本。### 完整研究助手架构| 组件 | 说明 ||——|——|| 模型 | qwen-max || 短期记忆 | InMemoryMemory || 长期记忆 | LongTermMemory || 工具包 | search_papers · execute_python_code · take_notes · retrieve_knowledge · record_to_memory · retrieve_from_memory |"></a>集成工具 + 记忆 + 知识库，构建最终版本。<br>### 完整研究助手架构<br>| 组件 | 说明 |<br>|——|——|<br>| 模型 | <code>qwen-max</code> |<br>| 短期记忆 | <code>InMemoryMemory</code> |<br>| 长期记忆 | <code>LongTermMemory</code> |<br>| 工具包 | <code>search_papers</code> · <code>execute_python_code</code> · <code>take_notes</code> · <code>retrieve_knowledge</code> · <code>record_to_memory</code> · <code>retrieve_from_memory</code> |<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> agentscope.token <span class="keyword">import</span> CharTokenCounter</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_full_assistant</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;完整的研究助手：工具 + 记忆压缩 + RAG&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># ==================== 工具包 ====================</span></span><br><span class="line">    full_toolkit = Toolkit()</span><br><span class="line">    full_toolkit.register_tool_function(search_papers)</span><br><span class="line">    full_toolkit.register_tool_function(execute_python_code)</span><br><span class="line">    full_toolkit.register_tool_function(take_notes)</span><br><span class="line">    full_toolkit.register_tool_function(</span><br><span class="line">        knowledge.retrieve_knowledge,</span><br><span class="line">        func_description=<span class="string">&quot;从Transformer论文知识库中检索信息&quot;</span>,</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># ==================== 完整Agent ====================</span></span><br><span class="line">    full_assistant = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;ResearchAssistant&quot;</span>,</span><br><span class="line">        sys_prompt=(</span><br><span class="line">            <span class="string">&quot;你是一名为计算机工程师服务的专业研究助手。\n\n&quot;</span></span><br><span class="line">            <span class="string">&quot;## 你的能力：\n&quot;</span></span><br><span class="line">            <span class="string">&quot;1. 论文搜索：使用search_papers搜索学术论文\n&quot;</span></span><br><span class="line">            <span class="string">&quot;2. 知识检索：使用retrieve_knowledge从Transformer论文知识库检索信息\n&quot;</span></span><br><span class="line">            <span class="string">&quot;3. 代码执行：使用execute_python_code运行Python代码\n&quot;</span></span><br><span class="line">            <span class="string">&quot;4. 笔记记录：使用take_notes保存研究笔记\n\n&quot;</span></span><br><span class="line">            <span class="string">&quot;## 工作原则：\n&quot;</span></span><br><span class="line">            <span class="string">&quot;- 回答技术问题时，优先从知识库检索论文内容作为依据\n&quot;</span></span><br><span class="line">            <span class="string">&quot;- 使用代码工具进行计算以确保准确性\n&quot;</span></span><br><span class="line">            <span class="string">&quot;- 回答应准确、有条理，并在适当的地方包含引用&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        model=model,</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=full_toolkit,</span><br><span class="line">        <span class="comment"># 记忆压缩配置</span></span><br><span class="line">        compression_config=ReActAgent.CompressionConfig(</span><br><span class="line">            enable=<span class="literal">True</span>,</span><br><span class="line">            agent_token_counter=CharTokenCounter(),</span><br><span class="line">            trigger_threshold=<span class="number">5000</span>,</span><br><span class="line">            keep_recent=<span class="number">5</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># ==================== 示例对话 ====================</span></span><br><span class="line">    conversations = [</span><br><span class="line">        <span class="string">&quot;你好！我是一名对AI感兴趣的计算机工程师。你能帮我做什么？&quot;</span>,</span><br><span class="line">        <span class="string">&quot;帮我在知识库中搜索Transformer中自注意力的计算复杂度&quot;</span>,</span><br><span class="line">        <span class="string">&quot;计算：序列长度n=512，模型维度d=768，n*n*d等于多少？&quot;</span>,</span><br><span class="line">        <span class="string">&quot;帮我搜索关于提高Transformer效率的最新论文&quot;</span>,</span><br><span class="line">        <span class="string">&quot;记录今天的关键点：自注意力复杂度O(n^2*d)是长序列的瓶颈&quot;</span>,</span><br><span class="line">        <span class="string">&quot;总结一下我们今天讨论的内容&quot;</span>,</span><br><span class="line">    ]</span><br><span class="line">    <span class="comment"># 运行对话</span></span><br><span class="line">    <span class="keyword">for</span> user_input <span class="keyword">in</span> conversations:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n<span class="subst">&#123;<span class="string">&#x27;=&#x27;</span> * <span class="number">60</span>&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;User: <span class="subst">&#123;user_input&#125;</span>&quot;</span>)</span><br><span class="line">        response = <span class="keyword">await</span> full_assistant(</span><br><span class="line">            Msg(<span class="string">&quot;User&quot;</span>, user_input, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">        )</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Assistant: <span class="subst">&#123;response.get_text_content()&#125;</span>&quot;</span>)</span><br><span class="line">asyncio.run(demo_full_assistant())</span><br></pre></td></tr></table></figure></h2>
-          </div>
-        </div>
-        
-        <!-- Post Footer -->
-        <footer class="mt-16 pt-8 relative">
-          <!-- Decorative divider -->
-          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-[var(--primary-color)] to-transparent rounded-full"></div>
-          
-          <!-- Enhanced tags section -->
-          <div class="bg-gradient-to-r from-[var(--secondary-color)]/50 to-transparent rounded-2xl p-6 mb-8">
-            <h3 class="text-lg font-semibold mb-4 text-[var(--text-primary-color)] flex items-center gap-2">
-              <svg class="w-5 h-5 text-[var(--primary-color)]" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
-              </svg>
-              Tags
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/"
+                                   title="Hexo捣鼓笔记"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hexo捣鼓笔记</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2024/04/07/hello-world/"
+                                   title="Hello World"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hello World</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
             </div>
-          </div>
-          
-          <!-- Enhanced Navigation -->
-          <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            
-              <a href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/" 
-                 class="group p-6 bg-[var(--background-color)] border border-[var(--border-color)] rounded-xl hover:border-[var(--primary-color)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
-                <div class="flex items-center gap-3 mb-2">
-                  <svg class="w-5 h-5 text-[var(--primary-color)] group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-sm text-[var(--text-secondary-color)] font-medium">Previous Article</span>
-                </div>
-                <h4 class="text-[var(--text-primary-color)] font-semibold group-hover:text-[var(--primary-color)] transition-colors line-clamp-2">
-                  Hexo捣鼓笔记
-                </h4>
-              </a>
-            
-            
-            
-              <a href="/2024/04/07/hello-world/" 
-                 class="group p-6 bg-[var(--background-color)] border border-[var(--border-color)] rounded-xl hover:border-[var(--primary-color)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 text-right">
-                <div class="flex items-center justify-end gap-3 mb-2">
-                  <span class="text-sm text-[var(--text-secondary-color)] font-medium">Next Article</span>
-                  <svg class="w-5 h-5 text-[var(--primary-color)] group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <h4 class="text-[var(--text-primary-color)] font-semibold group-hover:text-[var(--primary-color)] transition-colors line-clamp-2">
-                  Hello World
-                </h4>
-              </a>
-            
-          </nav>
-        </footer>
-      </article>
-    </main>
-    
-    <footer class="bg-[var(--background-color)] border-t border-[var(--border-color)]">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-[var(--text-secondary-color)] text-sm">
-        © 2026 NoBody. All rights reserved.
-      </p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Privacy Policy</a>
-        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Terms of Service</a>
-      </div>
+        </div>
+
+        
     </div>
-  </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Keep Team</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
 </footer>
-  </div>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
 </body>
 </html>

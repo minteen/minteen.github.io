@@ -1,479 +1,352 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <!-- SEO and Meta Tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Title -->
-
-<title>NoBody</title>
-
-<!-- Description -->
-
-
-<meta name="description" content="Modern design meets elegant simplicity">
-
-
-<!-- Keywords -->
-
-
-<!-- Author -->
-
-<meta name="author" content="Your Name">
-
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://minteen.github.io/archives/2024/index.html">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="NoBody">
-<meta property="og:url" content="https://minteen.github.io/archives/2024/index.html">
-<meta property="og:site_name" content="NoBody">
-
-<meta property="og:description" content="Modern design meets elegant simplicity">
-
-
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NoBody">
-
-<meta name="twitter:description" content="Modern design meets elegant simplicity">
-
-
-
-<!-- Article specific meta -->
-
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon180.png">
-
-<!-- RSS Feed -->
-
-
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
-  
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script>
-    // Suppress Tailwind CDN production warning in development
-    if (typeof tailwind !== 'undefined') {
-      tailwind.config = {
-        corePlugins: {
-          preflight: false,
-        }
-      }
-    }
-  </script>
-  
-  
-  <!-- Theme CSS -->
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            归档: 2024 |
+        
+        Keep Theme
+    </title>
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/css/code-blocks.css">
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
-<link rel="stylesheet" href="/css/enhanced-code-blocks.css">
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
 
-  
-<link rel="stylesheet" href="/css/cover-images.css">
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
 
-  
-<link rel="stylesheet" href="/css/chinese-text-fix.css">
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
 
-  
-  <!-- Theme Colors -->
-  <style type="text/tailwindcss">
-    :root {
-      
-      --primary-color: #0c7ff2;
-      
-      --secondary-color: #f3f4f6;
-      
-      --background-color: #ffffff;
-      
-      --text-primary-color: #111827;
-      
-      --text-secondary-color: #6b7280;
-      
-      --border-color: #e5e7eb;
-      
-    }
-    body {
-      font-family: 'Newsreader', serif;
-      background-color: var(--background-color);
-      color: var(--text-primary-color);
-    }
-  </style>
-  
-  <!-- Mobile Menu Script -->
-  <script src="/js/mobile-menu.js" defer></script>
-  
-  <!-- Fixed Header Script -->
-  <script src="/js/fixed-header.js" defer></script>
-  
-  <!-- Code Copy Script -->
-  <script src="/js/code-copy.js" defer></script>
-  
-  <!-- Reading Progress Script -->
-  <script src="/js/reading-progress.js" defer></script>
-  
-  <!-- Theme Switcher Script -->
-  <script src="/js/theme-switcher.js" defer></script>
-  
-  <!-- Image Optimizer Script -->
-  <script src="/js/image-optimizer.js" defer></script>
-  
-  <!-- Enhanced Search Script -->
-  <script src="/js/enhanced-search.js" defer></script>
-  
-  <!-- Table of Contents Script -->
-  <script src="/js/table-of-contents.js" defer></script>
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"minteen.github.io","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Keep Theme","author":"Keep Team","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
 <meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/css/custom.css">
 </head>
-<body class="bg-[var(--background-color)] text-[var(--text-primary-color)]">
-  <div class="min-h-screen flex flex-col">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm fixed">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 sm:h-20 lg:h-24">
-      <!-- Logo and Title -->
-      <div class="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-        <a href="/" class="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity duration-200" title="回到首页">
-          
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
             
-              <!-- 默认SVG Logo -->
-              <svg class="h-6 w-6 sm:h-8 sm:w-8 text-[var(--primary-color)] flex-shrink-0" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-              </svg>
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
             
-          
-          <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight truncate">build myself, build the world</h1>
-        </a>
-      </div>
-      
-      <!-- Navigation -->
-      <div class="flex items-center gap-2">
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-2">
-          
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
             
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/">
-              Home
+            <a class="site-name border-box" href="/">
+               Keep Theme
             </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/categories/">
-              Categories
-            </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/tags/">
-              Tags
-            </a>
-          
-            
-            <a class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 relative group" 
-               href="/about/">
-              About
-            </a>
-          
-          
-          <!-- Desktop Search Button -->
-          <button id="search-toggle" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 flex items-center gap-2 border-0 bg-transparent relative group" title="搜索 (Ctrl+K)">
-            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            <span class="hidden xl:inline">搜索</span>
-          </button>
-          
-          <!-- Desktop Theme Switch Button -->
-          <button id="desktop-theme-switcher" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 flex items-center gap-2 border-0 bg-transparent relative group" title="切换主题">
-            <span id="desktop-theme-icon" class="text-base flex-shrink-0">🌓</span>
-            <span class="hidden xl:inline" id="desktop-theme-text">主题</span>
-          </button>
         </div>
-        
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex-shrink-0">
-          <button id="mobile-menu-button" class="px-4 py-2 text-base font-medium rounded-md text-[var(--text-secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--text-primary-color)] hover:underline hover:decoration-[var(--primary-color)] hover:decoration-2 hover:underline-offset-4 transition-all duration-200 border-0 bg-transparent relative group" title="菜单">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      
-      <!-- Mobile Navigation Menu -->
-      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-800 border-t border-[var(--border-color)] shadow-2xl rounded-b-2xl z-40">
-        <div class="px-4 py-6 space-y-3">
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/">
-              <div class="flex items-center justify-between">
-                <span>Home</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/categories/">
-              <div class="flex items-center justify-between">
-                <span>Categories</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/tags/">
-              <div class="flex items-center justify-between">
-                <span>Tags</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-            
-            <a class="block px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95" 
-               href="/about/">
-              <div class="flex items-center justify-between">
-                <span>About</span>
-                
-                  <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                  </svg>
-                
-              </div>
-              
-                <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              
-            </a>
-          
-          
-          <!-- 移动端搜索选项 -->
-          <button id="mobile-search-toggle" class="block w-full px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 text-left relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95">
-            <div class="flex items-center justify-between">
-              <span class="flex items-center gap-3">
-                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-                <span>搜索</span>
-              </span>
-              <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box active">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
             </div>
-            <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-          </button>
-          
-          <!-- 移动端主题切换选项 -->
-          <div class="border-t border-gray-200 dark:border-gray-600 pt-4 mt-4">
-            <button id="mobile-theme-switcher" class="block w-full px-5 py-4 text-base font-medium rounded-2xl text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 dark:hover:from-gray-700 dark:hover:to-gray-600 hover:text-[var(--primary-color)] dark:hover:text-white hover:border-l-4 hover:border-[var(--primary-color)] hover:shadow-md transition-all duration-300 text-left relative group border-l-4 border-transparent transform hover:scale-105 active:scale-95">
-              <div class="flex items-center justify-between">
-                <span class="flex items-center gap-3">
-                  <span id="mobile-theme-icon" class="flex-shrink-0 text-lg">🌓</span>
-                  <span id="mobile-theme-text">主题：跟随系统</span>
-                </span>
-                <svg class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-              <span class="absolute bottom-2 left-5 right-5 h-0.5 bg-[var(--primary-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-            </button>
-          </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu active">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
 </header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="archives-container">
+        <div class="archives-timeline border-box">
+            
+<div class="archive-list-container border-box">
     
-    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        
-          <!-- Reusable post card component -->
-<article class="group">
-  <div class="overflow-hidden rounded-lg mb-5">
+        <section class="archive-item border-box">
+            <div class="archive-item-header border-box">
+                <span class="archive-year">2024</span>
+            </div>
+            <ul class="archive-item-body border-box">
+                
+                    <li class="post-item border-box">
+                        <span class="starting-point border-box flex-center"></span>
+                        <span class="post-date border-box">04-08</span>
+                        <a class="post-title border-box text-ellipsis"
+                           href="/2024/04/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/AgentScope/QuickStart/"
+                        >AgentScope QuickStart</a>
+                    </li>
+                
+                    <li class="post-item border-box">
+                        <span class="starting-point border-box flex-center"></span>
+                        <span class="post-date border-box">04-07</span>
+                        <a class="post-title border-box text-ellipsis"
+                           href="/2024/04/07/hello-world/"
+                        >Hello World</a>
+                    </li>
+                
+                    <li class="post-item border-box">
+                        <span class="starting-point border-box flex-center"></span>
+                        <span class="post-date border-box">04-07</span>
+                        <a class="post-title border-box text-ellipsis"
+                           href="/2024/04/07/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E5%8C%BB%E7%96%97%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF/"
+                        >关键字识别技术</a>
+                    </li>
+                
+            </ul>
+        </section>
     
-      <div class="w-full aspect-[3/2] bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-lg group-hover:scale-105 transition-transform duration-500 ease-in-out flex items-center justify-center">
-        <svg class="w-12 h-12 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-    
-  </div>
-  
-  <div class="mb-3">
-    
-    
-    <h2 class="text-xl sm:text-2xl font-bold leading-normal tracking-tight mb-2">
-      <a class="hover:text-[var(--primary-color)] transition-colors" href="/2024/04/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/AgentScope/QuickStart/">
-        AgentScope QuickStart
-      </a>
-    </h2>
-    
-    <div class="flex items-center gap-4 text-sm text-[var(--text-secondary-color)] mb-3">
-      <time datetime="2024-04-07T16:00:00.000Z">
-        Apr 08, 2024
-      </time>
-      <span>•</span>
-      <span>6 min read</span>
+</div>
+
+        </div>
     </div>
-  </div>
-  
-  <p class="text-[var(--text-secondary-color)] text-base sm:text-lg leading-relaxed">
-    教程概述目标场景假设你是一名计算机科学工程师，对人工智能的发展（特别是大语言模型和Transformer架构）有着浓厚的兴趣。你希望你的助手能够：
-
-搜索最新的学术论文和技术新闻
-基于下载的论文PDF进行问答
-记住你的研究兴趣和偏好，并在未来的对话中主动利用这些信息
-
-核心组件对照表
+    
 
 
-功能
-对应
-  </p>
-  
-  
-</article>
+
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Keep Team</a>
         
-          <!-- Reusable post card component -->
-<article class="group">
-  <div class="overflow-hidden rounded-lg mb-5">
-    
-      <div class="w-full aspect-[3/2] bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-lg group-hover:scale-105 transition-transform duration-500 ease-in-out flex items-center justify-center">
-        <svg class="w-12 h-12 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-    
-  </div>
-  
-  <div class="mb-3">
-    
-    
-    <h2 class="text-xl sm:text-2xl font-bold leading-normal tracking-tight mb-2">
-      <a class="hover:text-[var(--primary-color)] transition-colors" href="/2024/04/07/hello-world/">
-        Hello World
-      </a>
-    </h2>
-    
-    <div class="flex items-center gap-4 text-sm text-[var(--text-secondary-color)] mb-3">
-      <time datetime="2024-04-06T16:00:00.000Z">
-        Apr 07, 2024
-      </time>
-      <span>•</span>
-      <span>1 min read</span>
     </div>
-  </div>
-  
-  <p class="text-[var(--text-secondary-color)] text-base sm:text-lg leading-relaxed">
-    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-  </p>
-  
-  
-</article>
-        
-          <!-- Reusable post card component -->
-<article class="group">
-  <div class="overflow-hidden rounded-lg mb-5">
-    
-      <div class="w-full aspect-[3/2] bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-lg group-hover:scale-105 transition-transform duration-500 ease-in-out flex items-center justify-center">
-        <svg class="w-12 h-12 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
-        </svg>
-      </div>
-    
-  </div>
-  
-  <div class="mb-3">
-    
-    
-    <h2 class="text-xl sm:text-2xl font-bold leading-normal tracking-tight mb-2">
-      <a class="hover:text-[var(--primary-color)] transition-colors" href="/2024/04/07/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E5%8C%BB%E7%96%97%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF/">
-        关键字识别技术
-      </a>
-    </h2>
-    
-    <div class="flex items-center gap-4 text-sm text-[var(--text-secondary-color)] mb-3">
-      <time datetime="2024-04-06T16:00:00.000Z">
-        Apr 07, 2024
-      </time>
-      <span>•</span>
-      <span>2 min read</span>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
     </div>
-  </div>
-  
-  <p class="text-[var(--text-secondary-color)] text-base sm:text-lg leading-relaxed">
-    暴力匹配
-遍历文本的每个位置，尝试用每个敏感词进行匹配。
 
-
-时间复杂度：假设敏感词库有 n 个词，平均长度为 m，待匹配文本长度为 L，时间复杂度为 $O(n\times L \times m)$。
-缺点分析：
-重复扫描：每个敏感词都要遍历整段文本，大量字符被重复比较。
-无状态复用：敏感词之间没有
-  </p>
-  
-  
-</article>
-        
-      </div>
-      
-      <!-- Pagination component -->
-
-    </main>
     
-    <footer class="bg-[var(--background-color)] border-t border-[var(--border-color)]">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-[var(--text-secondary-color)] text-sm">
-        © 2026 NoBody. All rights reserved.
-      </p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Privacy Policy</a>
-        <a class="text-[var(--text-secondary-color)] hover:text-[var(--primary-color)] transition-colors text-sm" href="#">Terms of Service</a>
-      </div>
-    </div>
-  </div>
+
+    
+
+    
 </footer>
-  </div>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
 </body>
 </html>
