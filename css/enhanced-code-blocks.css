@@ -1,0 +1,229 @@
+/* Enhanced code highlighting styles */
+
+/* Code block container improvements */
+.prose pre,
+.prose-lg pre {
+  position: relative;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px !important; /* 恢复完整圆角 */
+  padding: 1.5rem 1rem 1rem 1rem !important; /* 恢复正常内边距 */
+  margin: 2rem 0 !important; /* 恢复正常边距 */
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  line-height: 1.6 !important;
+  font-size: 0.9rem !important;
+}
+
+/* 移除语言指示器 - 保持代码块简洁 */
+.prose pre::before,
+.prose-lg pre::before {
+  display: none !important;
+}
+
+/* 移除所有语言指示器相关样式 - 保持代码块简洁 */
+
+/* Code content styling */
+.prose pre code,
+.prose-lg pre code {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Roboto Mono', monospace !important;
+  font-size: inherit !important;
+  font-weight: 400;
+  line-height: inherit !important;
+  white-space: pre;
+  word-wrap: normal;
+  tab-size: 2;
+}
+
+/* Inline code styling */
+.prose code:not(pre code),
+.prose-lg code:not(pre code) {
+  background: rgba(12, 127, 242, 0.1) !important;
+  color: var(--primary-color) !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 6px !important;
+  font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Roboto Mono', monospace !important;
+  font-size: 0.875em !important;
+  font-weight: 500;
+  border: 1px solid rgba(12, 127, 242, 0.2);
+  white-space: nowrap;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .prose pre,
+  .prose-lg pre {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    border-color: rgba(148, 163, 184, 0.3);
+  }
+  
+  .prose code:not(pre code),
+  .prose-lg code:not(pre code) {
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: #60a5fa !important;
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+  
+  /* 复制按钮深色模式适配 */
+  .prose pre .halunhaku-copy-btn,
+  .prose-lg pre .halunhaku-copy-btn {
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-color: rgba(148, 163, 184, 0.3) !important;
+    color: #e2e8f0 !important;
+  }
+  
+  .prose pre .halunhaku-copy-btn:hover,
+  .prose-lg pre .halunhaku-copy-btn:hover {
+    background: rgba(30, 41, 59, 1) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 4px 12px rgba(12, 127, 242, 0.3) !important;
+  }
+}
+
+/* Syntax highlighting colors */
+.prose pre code .hljs-comment,
+.prose pre code .hljs-quote {
+  color: #64748b !important;
+  font-style: italic;
+}
+
+.prose pre code .hljs-keyword,
+.prose pre code .hljs-selector-tag,
+.prose pre code .hljs-literal,
+.prose pre code .hljs-type {
+  color: #f472b6 !important;
+  font-weight: 600;
+}
+
+.prose pre code .hljs-string,
+.prose pre code .hljs-regexp {
+  color: #22d3ee !important;
+}
+
+.prose pre code .hljs-number,
+.prose pre code .hljs-built_in {
+  color: #fb7185 !important;
+}
+
+.prose pre code .hljs-variable,
+.prose pre code .hljs-template-variable {
+  color: #fbbf24 !important;
+}
+
+.prose pre code .hljs-function,
+.prose pre code .hljs-title {
+  color: #60a5fa !important;
+  font-weight: 600;
+}
+
+.prose pre code .hljs-params {
+  color: #e2e8f0 !important;
+}
+
+.prose pre code .hljs-tag {
+  color: #f472b6 !important;
+}
+
+.prose pre code .hljs-name,
+.prose pre code .hljs-attr {
+  color: #fbbf24 !important;
+}
+
+.prose pre code .hljs-attribute {
+  color: #22d3ee !important;
+}
+
+/* Scrollbar styling for code blocks */
+.prose pre::-webkit-scrollbar,
+.prose-lg pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.prose pre::-webkit-scrollbar-track,
+.prose-lg pre::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb,
+.prose-lg pre::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb:hover,
+.prose-lg pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Line numbers (if supported by highlighting library) */
+.prose pre code .hljs-ln-numbers,
+.prose-lg pre code .hljs-ln-numbers {
+  user-select: none;
+  color: #64748b !important;
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  padding-right: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.prose pre code .hljs-ln-code,
+.prose-lg pre code .hljs-ln-code {
+  padding-left: 1rem !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .prose pre,
+  .prose-lg pre {
+    margin: 1.5rem -1rem !important;
+    border-radius: 0 !important;
+    border-left: none;
+    border-right: none;
+    font-size: 0.8rem !important;
+    padding: 1.5rem 1rem 1rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .prose pre,
+  .prose-lg pre {
+    padding: 1.5rem 0.75rem 0.75rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Copy button positioning - 简洁设计 */
+.prose pre .halunhaku-copy-btn,
+.prose-lg pre .halunhaku-copy-btn {
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 15 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  transition: all 0.25s ease !important;
+}
+
+.prose pre .halunhaku-copy-btn:hover,
+.prose-lg pre .halunhaku-copy-btn:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  border-color: var(--primary-color) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 4px 12px rgba(12, 127, 242, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+  .prose pre .halunhaku-copy-btn,
+  .prose-lg pre .halunhaku-copy-btn {
+    top: 8px !important;
+    right: 8px !important;
+  }
+}

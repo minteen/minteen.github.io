@@ -5,6 +5,7 @@
   border-radius: 10px;
   transition: color 0.3s ease;
   padding: 10px 15px;
+  text-align: left;
 }
 
 .ad-hide:hover {
@@ -72,4 +73,141 @@
   padding: 2px 6px;
   border-radius: 3px;
   display: inline;
+}
+
+/* ==================== Blockquote 样式 ==================== */
+
+/* 默认块引用样式 */
+blockquote {
+  border-left: 4px solid #6c757d;
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+  color: #495057;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* 扩展语法块引用 - [!note] */
+.blockquote-note {
+  border-left-color: #17a2b8;
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.blockquote-note .blockquote-title {
+  font-weight: bold;
+  color: #0c5460;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-note .blockquote-title::before {
+  content: "💡";
+}
+
+/* 扩展语法块引用 - [!warning] */
+.blockquote-warning {
+  border-left-color: #ffc107;
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.blockquote-warning .blockquote-title {
+  font-weight: bold;
+  color: #856404;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-warning .blockquote-title::before {
+  content: "⚠️";
+}
+
+/* 扩展语法块引用 - [!success] */
+.blockquote-success {
+  border-left-color: #28a745;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.blockquote-success .blockquote-title {
+  font-weight: bold;
+  color: #155724;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-success .blockquote-title::before {
+  content: "✅";
+}
+
+/* 扩展语法块引用 - [!danger] */
+.blockquote-danger {
+  border-left-color: #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.blockquote-danger .blockquote-title {
+  font-weight: bold;
+  color: #721c24;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-danger .blockquote-title::before {
+  content: "❌";
+}
+
+/* 扩展语法块引用 - [!tip] */
+.blockquote-tip {
+  border-left-color: #6610f2;
+  background-color: #e9d8fd;
+  color: #4a148c;
+}
+
+.blockquote-tip .blockquote-title {
+  font-weight: bold;
+  color: #4a148c;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-tip .blockquote-title::before {
+  content: "💡";
+}
+
+/* 扩展语法块引用 - [!quote] */
+.blockquote-quote {
+  border-left-color: #6c757d;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-style: italic;
+}
+
+.blockquote-quote .blockquote-title {
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blockquote-quote .blockquote-title::before {
+  content: "📝";
 }
