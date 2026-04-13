@@ -169,25 +169,28 @@
 
                     <div class="home-post-content keep-markdown-body">
                         
-                            
-概述
-环境搭建与单智能体
-环境配置
-单个客服智能体
-单智能体的局限性
+                            概述基于 AgentScope 官方教程，记录如何构建一个多智能体协作的客服系统。
 
 
-智能路由与结构化输出
-什么是结构化输出?
-定义路由决策模型
-创建路由智能体
-结构化输出的优势
+
+特性
+用途
 
 
-多智能体协作模式
-MsgHub 消息广播模式
-Handoff 任务委派模式
-...
+
+结构化输出
+用于路由决策的可控格式输出
+
+
+MsgHub
+多智能体消息广播与协作
+
+
+Handoffs
+智能体任务委派与动态调度
+
+
+Hook...
                         
                     </div>
 
@@ -272,6 +275,51 @@ Handoff 任务委派模式
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
+                        <a href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/">
+                            Hexo捣鼓笔记
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            自定义代码块受到Obsidian中ad插件的启示，想在hexo博客中使用代码块代替&lt;div class=???&gt;的效果。例如将ad-hide自动转换为 &lt;div class=hide&gt;：
+在 source/css/custom...
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
                         <a href="/2026/04/07/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E5%8C%BB%E7%96%97%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF/">
                             关键字识别技术
                         </a>
@@ -309,51 +357,6 @@ Handoff 任务委派模式
 
     
         <a class="home-read-more" href="/2026/04/07/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E5%8C%BB%E7%96%97%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/">
-                            Hexo捣鼓笔记
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            自定义代码块受到Obsidian中ad插件的启示，想在hexo博客中使用代码块代替&lt;div class=???&gt;的效果。例如将ad-hide自动转换为 &lt;div class=hide&gt;：
-在 source/css/custom...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
@@ -462,51 +465,6 @@ Handoff 任务委派模式
                 <div class="home-post-item-bottom border-box">
                     
                     <h3 class="home-post-title border-box">
-                        <a href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                            向量数据库
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            
-向量数据库是专门用来存储和检索高维向量的数据库，核心能力是近似最近邻搜索，也叫 ANN，能在百万甚至亿级的向量里快速找出最相似的几条。本地开发使用Chroma，中小规模使用Qdrant，超大规模使用Milvus。PostgreSQL支持pgvect...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
                         <a href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/Embedding/">
                             Embedding
                         </a>
@@ -545,6 +503,51 @@ Handoff 任务委派模式
 
     
         <a class="home-read-more" href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/Embedding/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-post-item">
+
+                
+
+                <div class="home-post-item-bottom border-box">
+                    
+                    <h3 class="home-post-title border-box">
+                        <a href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                            向量数据库
+                        </a>
+                    </h3>
+
+                    <div class="home-post-content keep-markdown-body">
+                        
+                            
+向量数据库是专门用来存储和检索高维向量的数据库，核心能力是近似最近邻搜索，也叫 ANN，能在百万甚至亿级的向量里快速找出最相似的几条。本地开发使用Chroma，中小规模使用Qdrant，超大规模使用Milvus。PostgreSQL支持pgvect...
+                        
+                    </div>
+
+                    
+
+<div class="post-meta-info-container border-box home">
+    <div class="post-meta-info border-box">
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
     
 </div>
 
