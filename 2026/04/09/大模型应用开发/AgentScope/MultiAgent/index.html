@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Nobody">
+    
+    <title>
+        
+            AgentScope MuiltAgent |
+        
+        Build MySelf
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"minteen.github.io","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Build MySelf","author":"Nobody","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"mathjax":{"enable":true,"version":"3.2.2"},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/css/custom.css">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Build MySelf
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        AgentScope MuiltAgent
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Nobody</span>
+                                
+                                    <span class="author-badge">Lv2</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-04-09 10:00:00</span>
+            </span>
+
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/agent/">agent</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <ul>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93">环境搭建与单智能体</a><ul>
+<li><a href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE">环境配置</a></li>
+<li><a href="#%E5%8D%95%E4%B8%AA%E5%AE%A2%E6%9C%8D%E6%99%BA%E8%83%BD%E4%BD%93">单个客服智能体</a></li>
+<li><a href="#%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7">单智能体的局限性</a></li>
+</ul>
+</li>
+<li><a href="#%E6%99%BA%E8%83%BD%E8%B7%AF%E7%94%B1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA">智能路由与结构化输出</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA">什么是结构化输出?</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89%E8%B7%AF%E7%94%B1%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B">定义路由决策模型</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1%E6%99%BA%E8%83%BD%E4%BD%93">创建路由智能体</a></li>
+<li><a href="#%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E7%9A%84%E4%BC%98%E5%8A%BF">结构化输出的优势</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F">多智能体协作模式</a><ul>
+<li><a href="#msghub-%E6%B6%88%E6%81%AF%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%BC%8F">MsgHub 消息广播模式</a></li>
+<li><a href="#handoff-%E4%BB%BB%E5%8A%A1%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F">Handoff 任务委派模式</a></li>
+<li><a href="#%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%AF%B9%E6%AF%94">两种模式对比</a></li>
+</ul>
+</li>
+<li><a href="#human-in-the-loop">Human-in-the-Loop</a><ul>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-hook">什么是 Hook?</a></li>
+<li><a href="#hook-%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D">Hook 函数签名</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%A0%B8-hook">实现人工审核 Hook</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%8C%E6%95%B4%E7%B3%BB%E7%BB%9F%E6%95%B4%E5%90%88">完整系统整合</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+<hr>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>基于 <code>AgentScope</code> 官方教程，记录如何构建一个多智能体协作的客服系统。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>结构化输出</strong></td>
+<td>用于路由决策的可控格式输出</td>
+</tr>
+<tr>
+<td><strong>MsgHub</strong></td>
+<td>多智能体消息广播与协作</td>
+</tr>
+<tr>
+<td><strong>Handoffs</strong></td>
+<td>智能体任务委派与动态调度</td>
+</tr>
+<tr>
+<td><strong>Hooks</strong></td>
+<td>人机回环审核机制</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="环境搭建与单智能体"><a href="#环境搭建与单智能体" class="headerlink" title="环境搭建与单智能体"></a>环境搭建与单智能体</h2><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 AgentScope</span></span><br><span class="line">pip install agentscope</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 API Key (以通义千问为例)</span></span><br><span class="line"><span class="built_in">export</span> DASHSCOPE_API_KEY=your_api_key</span><br></pre></td></tr></table></figure>
+
+<h3 id="单个客服智能体"><a href="#单个客服智能体" class="headerlink" title="单个客服智能体"></a>单个客服智能体</h3><p>首先创建一个最基础的客服智能体,这是我们的起点:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_support_agent</span>() -&gt; ReActAgent:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建一个基础客服智能体&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 1. 创建模型实例</span></span><br><span class="line">    model = DashScopeChatModel(</span><br><span class="line">        model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">        api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">        stream=<span class="literal">True</span>,  <span class="comment"># 启用流式输出</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 创建 ReActAgent</span></span><br><span class="line">    <span class="comment"># ReActAgent 是 AgentScope 提供的一个能够思考(Reason)并行动(Act)的智能体</span></span><br><span class="line">    <span class="keyword">return</span> ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;CustomerSupport&quot;</span>,</span><br><span class="line">        sys_prompt=<span class="string">&quot;&quot;&quot;你是一名专业的客服代表,负责帮助客户解决问题。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    你应该:</span></span><br><span class="line"><span class="string">    1. 礼貌耐心地回答客户问题</span></span><br><span class="line"><span class="string">    2. 准确理解客户需求</span></span><br><span class="line"><span class="string">    3. 提供清晰有帮助的回复</span></span><br><span class="line"><span class="string">    4. 对于无法解决的问题,解释原因并提供替代方案&quot;&quot;&quot;</span>,</span><br><span class="line">        model=model,</span><br><span class="line">        formatter=DashScopeChatFormatter(),  <span class="comment"># 单智能体用这个格式化器</span></span><br><span class="line">        memory=InMemoryMemory(),  <span class="comment"># 内存记忆,会话结束后清空</span></span><br><span class="line">        toolkit=Toolkit(),  <span class="comment"># 工具箱,目前为空</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_basic_support</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示基础客服智能体&quot;&quot;&quot;</span></span><br><span class="line">    agent = create_support_agent()</span><br><span class="line"></span><br><span class="line">    queries = [</span><br><span class="line">        <span class="string">&quot;我的订单什么时候到?&quot;</span>,</span><br><span class="line">        <span class="string">&quot;我想退货,该怎么做?&quot;</span>,</span><br><span class="line">        <span class="string">&quot;会员有什么福利?&quot;</span>,</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> query <span class="keyword">in</span> queries:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n客户: <span class="subst">&#123;query&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="comment"># 调用智能体:传入 Msg 对象,获取回复</span></span><br><span class="line">        response = <span class="keyword">await</span> agent(Msg(<span class="string">&quot;Customer&quot;</span>, query, <span class="string">&quot;user&quot;</span>))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;客服: <span class="subst">&#123;response.get_text_content()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">asyncio.run(demo_basic_support())</span><br></pre></td></tr></table></figure>
+
+<h3 id="单智能体的局限性"><a href="#单智能体的局限性" class="headerlink" title="单智能体的局限性"></a>单智能体的局限性</h3><p>虽然单个智能体能处理基础对话，但有明显缺陷:</p>
+<ol>
+<li><strong>无法处理所有类型问题</strong> - 技术、订单、投诉需要不同专业知识</li>
+<li><strong>复杂问题需要协作</strong> - 单个智能体知识有限</li>
+<li><strong>缺少路由机制</strong> - 不知道该由谁来处理什么问题</li>
+</ol>
+<p>这就是为什么我们需要多智能体系统。</p>
+<h2 id="智能路由与结构化输出"><a href="#智能路由与结构化输出" class="headerlink" title="智能路由与结构化输出"></a>智能路由与结构化输出</h2><h3 id="什么是结构化输出"><a href="#什么是结构化输出" class="headerlink" title="什么是结构化输出?"></a>什么是结构化输出?</h3><blockquote>
+<p>结构化输出就是让 LLM 不再返回自由文本,而是按照我们定义的 JSON Schema 返回数据。这样我们的程序就能直接解析和使用这些数据，而不用去做麻烦的文本解析。</p>
+</blockquote>
+<p>在 <code>AgentScope</code> 中，结构化输出存储在 <code>response.metadata</code> 里,而 <code>response.get_text_content()</code> 仍然返回文本内容。</p>
+<h3 id="定义路由决策模型"><a href="#定义路由决策模型" class="headerlink" title="定义路由决策模型"></a>定义路由决策模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">RouteDecision</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;路由决策的结构化输出&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 Literal 限定可选值，确保输出在预期范围内</span></span><br><span class="line">    category: <span class="type">Literal</span>[<span class="string">&quot;technical&quot;</span>， <span class="string">&quot;order&quot;</span>， <span class="string">&quot;complaint&quot;</span>， <span class="string">&quot;general&quot;</span>] = Field(</span><br><span class="line">        description=(</span><br><span class="line">            <span class="string">&quot;问题类别: technical(技术问题)， &quot;</span></span><br><span class="line">            <span class="string">&quot;order(订单问题)， complaint(投诉)， &quot;</span></span><br><span class="line">            <span class="string">&quot;general(一般咨询)&quot;</span></span><br><span class="line">        )，</span><br><span class="line">    )</span><br><span class="line">    confidence: <span class="built_in">float</span> = Field(</span><br><span class="line">        description=<span class="string">&quot;分类置信度，0到1之间&quot;</span>，</span><br><span class="line">        ge=<span class="number">0</span>，  <span class="comment"># 大于等于0</span></span><br><span class="line">        le=<span class="number">1</span>，  <span class="comment"># 小于等于1</span></span><br><span class="line">    )</span><br><span class="line">    summary: <span class="built_in">str</span> = Field(</span><br><span class="line">        description=<span class="string">&quot;问题简要摘要&quot;</span>，</span><br><span class="line">    )</span><br><span class="line">    priority: <span class="type">Literal</span>[<span class="string">&quot;low&quot;</span>， <span class="string">&quot;medium&quot;</span>， <span class="string">&quot;high&quot;</span>] = Field(</span><br><span class="line">        description=<span class="string">&quot;问题优先级&quot;</span>，</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建路由智能体"><a href="#创建路由智能体" class="headerlink" title="创建路由智能体"></a>创建路由智能体</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_router_agent</span>() -&gt; ReActAgent:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建路由智能体&quot;&quot;&quot;</span></span><br><span class="line">    model = DashScopeChatModel(</span><br><span class="line">        model_name=<span class="string">&quot;qwen-max&quot;</span>，</span><br><span class="line">        api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>)，</span><br><span class="line">        stream=<span class="literal">False</span>，  <span class="comment"># ⚠️ 关键点:结构化输出建议关闭流式输出</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;Router&quot;</span>，</span><br><span class="line">        sys_prompt=<span class="string">&quot;&quot;&quot;你是一个智能路由系统，负责分析客户问题并决定应该由哪个专业团队处理。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">分类规则:</span></span><br><span class="line"><span class="string">- technical: 产品使用问题、技术故障、功能咨询</span></span><br><span class="line"><span class="string">- order: 订单状态、物流、退换货</span></span><br><span class="line"><span class="string">- complaint: 不满、投诉、赔偿要求</span></span><br><span class="line"><span class="string">- general: 会员、促销、一般咨询</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">优先级规则:</span></span><br><span class="line"><span class="string">- high: 投诉、紧急订单问题</span></span><br><span class="line"><span class="string">- medium: 一般订单和技术问题</span></span><br><span class="line"><span class="string">- low: 咨询类问题&quot;&quot;&quot;</span>，</span><br><span class="line">        model=model，</span><br><span class="line">        formatter=DashScopeChatFormatter()，</span><br><span class="line">        memory=InMemoryMemory()，</span><br><span class="line">        toolkit=Toolkit()，</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_routing</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示智能路由分类&quot;&quot;&quot;</span></span><br><span class="line">    router = create_router_agent()</span><br><span class="line"></span><br><span class="line">    queries = [</span><br><span class="line">        <span class="string">&quot;我的订单显示已发货，但三天了还没收到&quot;</span>，</span><br><span class="line">        <span class="string">&quot;APP老是崩溃，怎么办?&quot;</span>，</span><br><span class="line">        <span class="string">&quot;这太差劲了!我要求全额退款!&quot;</span>，</span><br><span class="line">        <span class="string">&quot;你们有学生折扣吗?&quot;</span>，</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> query <span class="keyword">in</span> queries:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n客户: <span class="subst">&#123;query&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 使用 structured_model 参数获取结构化输出</span></span><br><span class="line">        response = <span class="keyword">await</span> router(</span><br><span class="line">            Msg(<span class="string">&quot;Customer&quot;</span>， query， <span class="string">&quot;user&quot;</span>)，</span><br><span class="line">            structured_model=RouteDecision，  <span class="comment"># 指定输出模型</span></span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 从 metadata 中获取结构化结果</span></span><br><span class="line">        decision = response.metadata</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;  → 类别: <span class="subst">&#123;decision.get(<span class="string">&#x27;category&#x27;</span>)&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;  → 优先级: <span class="subst">&#123;decision.get(<span class="string">&#x27;priority&#x27;</span>)&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;  → 置信度: <span class="subst">&#123;decision.get(<span class="string">&#x27;confidence&#x27;</span>)&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;  → 摘要: <span class="subst">&#123;decision.get(<span class="string">&#x27;summary&#x27;</span>)&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">asyncio.run(demo_routing())</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构化输出的优势"><a href="#结构化输出的优势" class="headerlink" title="结构化输出的优势"></a>结构化输出的优势</h3><ol>
+<li><strong>格式可控</strong> - 方便程序处理和下游逻辑分支</li>
+<li><strong>包含置信度</strong> - 可以用于降级策略(置信度低时转人工)</li>
+<li><strong>Pydantic 验证</strong> - 自动约束数据类型和范围</li>
+</ol>
+<h2 id="多智能体协作模式"><a href="#多智能体协作模式" class="headerlink" title="多智能体协作模式"></a>多智能体协作模式</h2><p>当系统涉及多个专业智能体时,需要一种机制让它们高效协作。<code>AgentScope</code> 提供了两种常用模式:</p>
+<h3 id="MsgHub-消息广播模式"><a href="#MsgHub-消息广播模式" class="headerlink" title="MsgHub 消息广播模式"></a>MsgHub 消息广播模式</h3><blockquote>
+<p>MsgHub 就像一个微信群,所有参与者都在同一个群里。每个人说话,其他人都能听到。这适合需要集体讨论的场景。</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">                   MsgHub</span><br><span class="line">                     ↓</span><br><span class="line">   ┌─────────────────┼─────────────────┐</span><br><span class="line">   ↓                 ↓                 ↓</span><br><span class="line">TechAgent       OrderAgent      ComplaintAgent</span><br><span class="line">   │                 │                 │</span><br><span class="line">   └────────── 消息广播 ──────────────┘</span><br></pre></td></tr></table></figure>
+
+<p><strong>特点</strong>:</p>
+<ul>
+<li>MsgHub 内的智能体调用会自动广播消息</li>
+<li>每个智能体都能”听”到其他智能体的回复</li>
+<li>形成自然的多方对话</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">create_model</span>() -&gt; DashScopeChatModel:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建共享的模型实例&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> DashScopeChatModel(</span><br><span class="line">        model_name=<span class="string">&quot;qwen-max&quot;</span>，</span><br><span class="line">        api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>)，</span><br><span class="line">        stream=<span class="literal">True</span>，</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_specialist_agent</span>(<span class="params"></span></span><br><span class="line"><span class="params">    name: <span class="built_in">str</span>，</span></span><br><span class="line"><span class="params">    specialty: <span class="built_in">str</span>，</span></span><br><span class="line"><span class="params">    description: <span class="built_in">str</span>，</span></span><br><span class="line"><span class="params"></span>) -&gt; ReActAgent:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建专业客服智能体</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        name: 智能体名称</span></span><br><span class="line"><span class="string">        specialty: 专业领域</span></span><br><span class="line"><span class="string">        description: 详细描述</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> ReActAgent(</span><br><span class="line">        name=name，</span><br><span class="line">        sys_prompt=<span class="string">f&quot;&quot;&quot;你是 <span class="subst">&#123;name&#125;</span>，专攻 <span class="subst">&#123;specialty&#125;</span>。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">&#123;description&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">与其他客服智能体协作时:</span></span><br><span class="line"><span class="string">- 认真倾听同事的意见</span></span><br><span class="line"><span class="string">- 在你的专业领域内提供见解</span></span><br><span class="line"><span class="string">- 如果问题超出你的专业范围，建议移交给合适的同事&quot;&quot;&quot;</span>，</span><br><span class="line">        model=create_model()，</span><br><span class="line">        <span class="comment"># ⚠️ 多智能体场景使用 MultiAgentFormatter</span></span><br><span class="line">        formatter=DashScopeMultiAgentFormatter()，</span><br><span class="line">        memory=InMemoryMemory()，</span><br><span class="line">        toolkit=Toolkit()，</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建专业智能体团队</span></span><br><span class="line">tech_agent = create_specialist_agent(</span><br><span class="line">    <span class="string">&quot;TechSupport&quot;</span>，</span><br><span class="line">    <span class="string">&quot;技术支持&quot;</span>，</span><br><span class="line">    <span class="string">&quot;你是产品技术问题、故障排除和功能使用指导的专家。&quot;</span>，</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">order_agent = create_specialist_agent(</span><br><span class="line">    <span class="string">&quot;OrderSupport&quot;</span>，</span><br><span class="line">    <span class="string">&quot;订单服务&quot;</span>，</span><br><span class="line">    <span class="string">&quot;你处理订单查询、物流跟踪和退换货。&quot;</span>，</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">complaint_agent = create_specialist_agent(</span><br><span class="line">    <span class="string">&quot;ComplaintHandler&quot;</span>，</span><br><span class="line">    <span class="string">&quot;投诉处理&quot;</span>，</span><br><span class="line">    <span class="string">&quot;你处理客户投诉、安抚情绪并提供解决方案。&quot;</span>，</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_msghub</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示 MsgHub 多智能体协作</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    所有参与者在同一个 MsgHub 内共享上下文。</span></span><br><span class="line"><span class="string">    每个智能体的回复会自动广播给其他参与者。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    customer_issue = (</span><br><span class="line">        <span class="string">&quot;我手机上的 APP 打不开了，而且订单显示还没发货。这真让人失望!&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 MsgHub 启用多智能体协作</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> MsgHub(</span><br><span class="line">        participants=[tech_agent， order_agent， complaint_agent]，</span><br><span class="line">    ):</span><br><span class="line">        <span class="comment"># 技术支持先分析技术问题</span></span><br><span class="line">        <span class="keyword">await</span> tech_agent(</span><br><span class="line">            Msg(</span><br><span class="line">                <span class="string">&quot;Coordinator&quot;</span>，</span><br><span class="line">                <span class="string">f&quot;客户问题: <span class="subst">&#123;customer_issue&#125;</span>\n&quot;</span></span><br><span class="line">                <span class="string">&quot;请技术支持分析技术问题。&quot;</span>，</span><br><span class="line">                <span class="string">&quot;user&quot;</span>，</span><br><span class="line">            )，</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 订单支持检查订单状态(能看到技术支持的回复)</span></span><br><span class="line">        <span class="keyword">await</span> order_agent(</span><br><span class="line">            Msg(<span class="string">&quot;Coordinator&quot;</span>， <span class="string">&quot;请订单支持检查订单状态。&quot;</span>， <span class="string">&quot;user&quot;</span>)，</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 投诉处理者综合信息并提供解决方案</span></span><br><span class="line">        <span class="comment"># (能看到前两个智能体的讨论)</span></span><br><span class="line">        <span class="keyword">await</span> complaint_agent(</span><br><span class="line">            Msg(</span><br><span class="line">                <span class="string">&quot;Coordinator&quot;</span>，</span><br><span class="line">                <span class="string">&quot;请综合以上所有信息，为客户提供满意的解决方案。&quot;</span>，</span><br><span class="line">                <span class="string">&quot;user&quot;</span>，</span><br><span class="line">            )，</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">asyncio.run(demo_msghub())</span><br></pre></td></tr></table></figure>
+
+<h3 id="Handoff-任务委派模式"><a href="#Handoff-任务委派模式" class="headerlink" title="Handoff 任务委派模式"></a>Handoff 任务委派模式</h3><blockquote>
+<p>Handoff 模式像一个项目经理(Orchestrator)，接到任务后把它拆分成子任务，然后分派给不同的工人(Worker)去做。工人做完后把结果返回给项目经理,项目经理再汇总。</p>
+</blockquote>
+<p>与 MsgHub 不同的是,Worker 之间互相不知道对方的存在,它们只和 Orchestrator 通信。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Orchestrator Agent</span><br><span class="line">    ├── 🔧 create_tech_worker(task)   → TechWorker Agent</span><br><span class="line">    ├── 🔧 create_order_worker(task)  → OrderWorker Agent</span><br><span class="line">    └── 🔧 create_complaint_worker(task) → ComplaintWorker Agent</span><br></pre></td></tr></table></figure>
+
+<p><strong>核心优势</strong>:</p>
+<ol>
+<li><strong>动态性</strong>: Worker 可以按需创建或预定义</li>
+<li><strong>上下文隔离</strong>: Worker 之间不共享上下文,减少上下文压力</li>
+</ol>
+<p>首先,定义 Worker 会用到的工具函数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">query_order</span>(<span class="params">order_id: <span class="built_in">str</span></span>) -&gt; ToolResponse:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;查询订单状态</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        order_id: 订单ID</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 模拟订单数据</span></span><br><span class="line">    orders = &#123;</span><br><span class="line">        <span class="string">&quot;12345&quot;</span>: &#123;<span class="string">&quot;status&quot;</span>: <span class="string">&quot;shipped&quot;</span>, <span class="string">&quot;eta&quot;</span>: <span class="string">&quot;2024-01-20&quot;</span>&#125;,</span><br><span class="line">        <span class="string">&quot;67890&quot;</span>: &#123;<span class="string">&quot;status&quot;</span>: <span class="string">&quot;processing&quot;</span>, <span class="string">&quot;eta&quot;</span>: <span class="string">&quot;2024-01-22&quot;</span>&#125;,</span><br><span class="line">    &#125;</span><br><span class="line">    order = orders.get(order_id, &#123;<span class="string">&quot;status&quot;</span>: <span class="string">&quot;not_found&quot;</span>&#125;)</span><br><span class="line">    <span class="keyword">return</span> ToolResponse(</span><br><span class="line">        content=[TextBlock(<span class="built_in">type</span>=<span class="string">&quot;text&quot;</span>, text=<span class="string">f&quot;订单 <span class="subst">&#123;order_id&#125;</span>: <span class="subst">&#123;order&#125;</span>&quot;</span>)],</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+
+<p>然后,定义创建各类专业 Worker 的工具函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">create_tech_worker</span>(<span class="params">task_description: <span class="built_in">str</span></span>) -&gt; ToolResponse:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建技术支持 Worker 智能体处理技术问题</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        task_description: 要处理的技术问题描述</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    worker = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;TechWorker&quot;</span>,</span><br><span class="line">        sys_prompt=(</span><br><span class="line">            <span class="string">&quot;你是一名技术支持专家,精通产品技术问题、故障排除和功能使用指导。&quot;</span></span><br><span class="line">            <span class="string">&quot;请专业、准确地回答用户的技术问题。&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        model=DashScopeChatModel(</span><br><span class="line">            model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">            api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">            stream=<span class="literal">False</span>,</span><br><span class="line">        ),</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=Toolkit(),</span><br><span class="line">    )</span><br><span class="line">    res = <span class="keyword">await</span> worker(Msg(<span class="string">&quot;user&quot;</span>, task_description, <span class="string">&quot;user&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> ToolResponse(content=res.get_content_blocks(<span class="string">&quot;text&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">create_order_worker</span>(<span class="params">task_description: <span class="built_in">str</span></span>) -&gt; ToolResponse:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建订单服务 Worker 智能体处理订单相关问题</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        task_description: 要处理的订单问题描述</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 给订单 Worker 配备订单查询工具</span></span><br><span class="line">    toolkit = Toolkit()</span><br><span class="line">    toolkit.register_tool_function(query_order)</span><br><span class="line"></span><br><span class="line">    worker = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;OrderWorker&quot;</span>,</span><br><span class="line">        sys_prompt=<span class="string">&quot;你是一名订单服务专家,负责订单查询、物流跟踪和退换货。&quot;</span>,</span><br><span class="line">        model=DashScopeChatModel(</span><br><span class="line">            model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">            api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">            stream=<span class="literal">False</span>,</span><br><span class="line">        ),</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=toolkit,</span><br><span class="line">    )</span><br><span class="line">    res = <span class="keyword">await</span> worker(Msg(<span class="string">&quot;user&quot;</span>, task_description, <span class="string">&quot;user&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> ToolResponse(content=res.get_content_blocks(<span class="string">&quot;text&quot;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">create_complaint_worker</span>(<span class="params">task_description: <span class="built_in">str</span></span>) -&gt; ToolResponse:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;创建投诉处理 Worker 智能体处理客户投诉</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        task_description: 要处理的投诉描述</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    worker = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;ComplaintWorker&quot;</span>,</span><br><span class="line">        sys_prompt=(</span><br><span class="line">            <span class="string">&quot;你是一名投诉处理专家,负责处理客户投诉、安抚情绪和&quot;</span></span><br><span class="line">            <span class="string">&quot;提供合理的解决方案。你的目标是确保客户满意。&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        model=DashScopeChatModel(</span><br><span class="line">            model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">            api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">            stream=<span class="literal">False</span>,</span><br><span class="line">        ),</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        toolkit=Toolkit(),</span><br><span class="line">    )</span><br><span class="line">    res = <span class="keyword">await</span> worker(Msg(<span class="string">&quot;user&quot;</span>, task_description, <span class="string">&quot;user&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> ToolResponse(content=res.get_content_blocks(<span class="string">&quot;text&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>现在创建 Orchestrator 并将 Worker 创建函数注册为工具：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_handoff</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示 Handoff (Orchestrator-Workers) 模式</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Orchestrator 通过工具调用自主决定委派给哪个专业 Worker。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 将专业 Worker 创建函数注册为工具</span></span><br><span class="line">    toolkit = Toolkit()</span><br><span class="line">    toolkit.register_tool_function(create_tech_worker)</span><br><span class="line">    toolkit.register_tool_function(create_order_worker)</span><br><span class="line">    toolkit.register_tool_function(create_complaint_worker)</span><br><span class="line"></span><br><span class="line">    orchestrator = ReActAgent(</span><br><span class="line">        name=<span class="string">&quot;Orchestrator&quot;</span>,</span><br><span class="line">        sys_prompt=<span class="string">&quot;&quot;&quot;你是客服系统的 Orchestrator。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">你的职责是:</span></span><br><span class="line"><span class="string">1. 分析客户问题,确定需要哪些专业支持</span></span><br><span class="line"><span class="string">2. 将子任务委派给合适的 Worker(通过工具调用)</span></span><br><span class="line"><span class="string">3. 汇总每个 Worker 的结果并提供最终回复</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">对于复杂问题,你可以并行委派给多个 Worker。&quot;&quot;&quot;</span>,</span><br><span class="line">        model=DashScopeChatModel(</span><br><span class="line">            model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">            api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">            stream=<span class="literal">False</span>,</span><br><span class="line">            generate_kwargs=&#123;<span class="string">&quot;parallel_tool_calls&quot;</span>: <span class="literal">True</span>&#125;,</span><br><span class="line">        ),</span><br><span class="line">        memory=InMemoryMemory(),</span><br><span class="line">        formatter=DashScopeChatFormatter(),</span><br><span class="line">        toolkit=toolkit,</span><br><span class="line">        parallel_tool_calls=<span class="literal">True</span>,  <span class="comment"># 启用并行工具调用</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 一个涉及多个方面的复杂客户问题</span></span><br><span class="line">    customer_issue = (</span><br><span class="line">        <span class="string">&quot;我手机上的 APP 打不开了,而且订单显示还没发货。这真让人失望!&quot;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;客户: <span class="subst">&#123;customer_issue&#125;</span>&quot;</span>)</span><br><span class="line">    response = <span class="keyword">await</span> orchestrator(</span><br><span class="line">        Msg(<span class="string">&quot;Customer&quot;</span>, customer_issue, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">    )</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\n最终回复:\n<span class="subst">&#123;response.get_text_content()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">asyncio.run(demo_handoff())</span><br></pre></td></tr></table></figure>
+
+<h3 id="两种模式对比"><a href="#两种模式对比" class="headerlink" title="两种模式对比"></a>两种模式对比</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>MsgHub (消息广播)</th>
+<th>Handoff (任务委派)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>协作模式</strong></td>
+<td>平等讨论、多方对话</td>
+<td>层级分工、任务分派</td>
+</tr>
+<tr>
+<td><strong>上下文共享</strong></td>
+<td>所有参与者共享完整对话上下文</td>
+<td>Worker 只收到 Orchestrator 分配的任务描述</td>
+</tr>
+<tr>
+<td><strong>执行流程</strong></td>
+<td>需要显式编排调用顺序</td>
+<td>Orchestrator 自主决定调用哪个 Worker</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>多方头脑风暴、交叉参考意见、辩论讨论</td>
+<td>清晰任务分解、独立子任务处理、可并行化场景</td>
+</tr>
+<tr>
+<td><strong>通信开销</strong></td>
+<td>高(每条消息广播给所有参与者)</td>
+<td>低(只在 Orchestrator 和 Worker 之间通信)</td>
+</tr>
+<tr>
+<td><strong>灵活性</strong></td>
+<td>参与者必须预先已知</td>
+<td>可以动态创建新的 Worker 类型</td>
+</tr>
+</tbody></table>
+<p><strong>选择指南</strong>:</p>
+<ul>
+<li>如果问题需要多个专家<strong>讨论并参考彼此的意见</strong> → 用 MsgHub</li>
+<li>如果问题可以分解为<strong>独立的子任务</strong> → 用 Handoff</li>
+<li>在复杂系统中,两者可以<strong>结合使用</strong>: Orchestrator 通过 Handoff 委派子任务，而某些子任务内部使用 MsgHub 进行多智能体协作讨论</li>
+</ul>
+<hr>
+<h2 id="Human-in-the-Loop"><a href="#Human-in-the-Loop" class="headerlink" title="Human-in-the-Loop"></a>Human-in-the-Loop</h2><h3 id="什么是-Hook"><a href="#什么是-Hook" class="headerlink" title="什么是 Hook?"></a>什么是 Hook?</h3><p><strong>我的理解</strong>: Hook 就是在智能体执行的关键节点插入自定义逻辑。就像给智能体装了”监听器”,在它回复之前或之后,我们可以插一脚进来做些事情。</p>
+<p>在关键业务场景中,AI 生成的回复可能需要<strong>人工审核</strong>后再发给客户。AgentScope 的 <strong>Hook 机制</strong>提供了一种优雅的方式来实现人机回环,而不需要修改智能体的核心代码。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Agent.__call__()</span><br><span class="line">  ├── pre_reply hooks   ← 智能体回复前:审查/修改输入</span><br><span class="line">  ├── reply()            ← 智能体核心逻辑</span><br><span class="line">  └── post_reply hooks  ← 智能体回复后:审查/修改输出</span><br></pre></td></tr></table></figure>
+
+<p>对于 <code>ReActAgent</code>,还有更细粒度的 Hook:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ReActAgent.reply()</span><br><span class="line">  ├── pre_reasoning / post_reasoning  ← 推理前后</span><br><span class="line">  └── pre_acting / post_acting        ← 行动执行前后</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hook-函数签名"><a href="#Hook-函数签名" class="headerlink" title="Hook 函数签名"></a>Hook 函数签名</h3><p>Hook 函数的签名是固定的:</p>
+<ul>
+<li><strong>Pre-hook</strong>: <code>(self, kwargs) -&gt; dict | None</code></li>
+<li><strong>Post-hook</strong>: <code>(self, kwargs, output) -&gt; Any | None</code></li>
+</ul>
+<p>其中:</p>
+<ul>
+<li><code>self</code> 是智能体实例</li>
+<li><code>kwargs</code> 是函数字典</li>
+<li><code>output</code> 是函数返回值</li>
+<li>返回 <code>None</code> 表示不做修改</li>
+</ul>
+<h3 id="实现人工审核-Hook"><a href="#实现人工审核-Hook" class="headerlink" title="实现人工审核 Hook"></a>实现人工审核 Hook</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">human_review_post_reply_hook</span>(<span class="params"></span></span><br><span class="line"><span class="params">    self: AgentBase,</span></span><br><span class="line"><span class="params">    kwargs: <span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="type">Any</span>],</span></span><br><span class="line"><span class="params">    output: Msg,</span></span><br><span class="line"><span class="params"></span>) -&gt; Msg | <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;回复后 Hook:智能体回复后执行人工审核</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    如果人工审核不通过,将审核反馈附加到原始输入,再次调用智能体生成新回复。</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        self: 智能体实例</span></span><br><span class="line"><span class="string">        kwargs: reply 函数的参数字典</span></span><br><span class="line"><span class="string">        output: 智能体生成的回复消息</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        如果审核通过返回 None(保留原回复),否则返回修改后的回复</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> + <span class="string">&quot;=&quot;</span> * <span class="number">50</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;[人工审核] 智能体回复:&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;  <span class="subst">&#123;output.get_text_content()&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span> * <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 使用 UserAgent 获取人工输入</span></span><br><span class="line">    human = UserAgent(name=<span class="string">&quot;审核员&quot;</span>)</span><br><span class="line">    review_msg = <span class="keyword">await</span> human(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;System&quot;</span>,</span><br><span class="line">            <span class="string">&quot;请审核以上回复。输入 &#x27;ok&#x27; 表示通过,或输入你的修改反馈:&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    review_text = review_msg.get_text_content().strip()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> review_text.lower() == <span class="string">&quot;ok&quot;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;[审核通过] 回复已确认。&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span>  <span class="comment"># 返回 None 保留原始输出</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 审核不通过:将反馈附加到原始消息并重新生成</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;[审核不通过] 反馈: <span class="subst">&#123;review_text&#125;</span>&quot;</span>)</span><br><span class="line">    original_msg = kwargs.get(<span class="string">&quot;msg&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> original_msg <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="comment"># ⚠️ 关键点:临时移除 Hook 避免无限循环</span></span><br><span class="line">        <span class="variable language_">self</span>.clear_instance_hooks(<span class="string">&quot;post_reply&quot;</span>)</span><br><span class="line"></span><br><span class="line">        revised_msg = Msg(</span><br><span class="line">            original_msg.name,</span><br><span class="line">            <span class="string">f&quot;<span class="subst">&#123;original_msg.get_text_content()&#125;</span>\n\n&quot;</span></span><br><span class="line">            <span class="string">f&quot;[审核反馈] 请根据以下反馈修改: <span class="subst">&#123;review_text&#125;</span>&quot;</span>,</span><br><span class="line">            original_msg.role,</span><br><span class="line">        )</span><br><span class="line">        revised_output = <span class="keyword">await</span> <span class="variable language_">self</span>.reply(revised_msg)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 重新注册 Hook</span></span><br><span class="line">        <span class="variable language_">self</span>.register_instance_hook(</span><br><span class="line">            hook_type=<span class="string">&quot;post_reply&quot;</span>,</span><br><span class="line">            hook_name=<span class="string">&quot;human_review&quot;</span>,</span><br><span class="line">            hook=human_review_post_reply_hook,</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> revised_output</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">demo_human_review_hook</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;演示使用 post_reply Hook 进行人工审核&quot;&quot;&quot;</span></span><br><span class="line">    agent = create_support_agent()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 注册人工审核 Hook</span></span><br><span class="line">    agent.register_instance_hook(</span><br><span class="line">        hook_type=<span class="string">&quot;post_reply&quot;</span>,</span><br><span class="line">        hook_name=<span class="string">&quot;human_review&quot;</span>,</span><br><span class="line">        hook=human_review_post_reply_hook,</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    response = <span class="keyword">await</span> agent(</span><br><span class="line">        Msg(</span><br><span class="line">            <span class="string">&quot;Customer&quot;</span>,</span><br><span class="line">            <span class="string">&quot;我买了你们的产品,质量太差了。我要求退款!&quot;</span>,</span><br><span class="line">            <span class="string">&quot;user&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    )</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;\n最终回复: <span class="subst">&#123;response.get_text_content()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">asyncio.run(demo_human_review_hook())</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="完整系统整合"><a href="#完整系统整合" class="headerlink" title="完整系统整合"></a>完整系统整合</h2><p>现在我们将所有组件整合起来 - 路由、MsgHub 协作、Handoff 委派和人机回环 Hook,构建一个完整的多智能体客服系统。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ResolutionReport</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;解决报告的结构化输出&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    resolved: <span class="built_in">bool</span> = Field(description=<span class="string">&quot;问题是否解决&quot;</span>)</span><br><span class="line">    solution: <span class="built_in">str</span> = Field(description=<span class="string">&quot;提供的解决方案&quot;</span>)</span><br><span class="line">    follow_up: <span class="built_in">str</span> = Field(description=<span class="string">&quot;后续行动项&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CustomerSupportSystem</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;多智能体客服系统</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    整合路由、多智能体协作和人工审核。</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Attributes:</span></span><br><span class="line"><span class="string">        enable_human_review: 是否启用人工审核 Hook</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, enable_human_review: <span class="built_in">bool</span> = <span class="literal">False</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="variable language_">self</span>.model = DashScopeChatModel(</span><br><span class="line">            model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">            api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">            stream=<span class="literal">True</span>,</span><br><span class="line">        )</span><br><span class="line">        <span class="variable language_">self</span>.enable_human_review = enable_human_review</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 创建智能体</span></span><br><span class="line">        <span class="variable language_">self</span>.router = <span class="variable language_">self</span>._create_router()</span><br><span class="line">        <span class="variable language_">self</span>.tech_agent = <span class="variable language_">self</span>._create_specialist(</span><br><span class="line">            <span class="string">&quot;技术支持&quot;</span>,</span><br><span class="line">            <span class="string">&quot;TechSupport&quot;</span>,</span><br><span class="line">        )</span><br><span class="line">        <span class="variable language_">self</span>.order_agent = <span class="variable language_">self</span>._create_specialist(</span><br><span class="line">            <span class="string">&quot;订单服务&quot;</span>,</span><br><span class="line">            <span class="string">&quot;OrderSupport&quot;</span>,</span><br><span class="line">        )</span><br><span class="line">        <span class="variable language_">self</span>.complaint_agent = <span class="variable language_">self</span>._create_specialist(</span><br><span class="line">            <span class="string">&quot;投诉处理&quot;</span>,</span><br><span class="line">            <span class="string">&quot;ComplaintHandler&quot;</span>,</span><br><span class="line">        )</span><br><span class="line">        <span class="variable language_">self</span>.supervisor = <span class="variable language_">self</span>._create_supervisor()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果启用人工审核,为 supervisor 注册 hook</span></span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.enable_human_review:</span><br><span class="line">            <span class="variable language_">self</span>.supervisor.register_instance_hook(</span><br><span class="line">                hook_type=<span class="string">&quot;post_reply&quot;</span>,</span><br><span class="line">                hook_name=<span class="string">&quot;human_review&quot;</span>,</span><br><span class="line">                hook=human_review_post_reply_hook,</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_create_router</span>(<span class="params">self</span>) -&gt; ReActAgent:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;创建路由智能体&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> ReActAgent(</span><br><span class="line">            name=<span class="string">&quot;Router&quot;</span>,</span><br><span class="line">            sys_prompt=<span class="string">&quot;你是一个智能路由系统,分析客户问题并进行分类。&quot;</span>,</span><br><span class="line">            model=DashScopeChatModel(</span><br><span class="line">                model_name=<span class="string">&quot;qwen-max&quot;</span>,</span><br><span class="line">                api_key=os.environ.get(<span class="string">&quot;DASHSCOPE_API_KEY&quot;</span>),</span><br><span class="line">                stream=<span class="literal">False</span>,</span><br><span class="line">            ),</span><br><span class="line">            formatter=DashScopeChatFormatter(),</span><br><span class="line">            memory=InMemoryMemory(),</span><br><span class="line">            toolkit=Toolkit(),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_create_specialist</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        specialty: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        name: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">    </span>) -&gt; ReActAgent:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;创建专业客服智能体&quot;&quot;&quot;</span></span><br><span class="line">        toolkit = Toolkit()</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;订单&quot;</span> <span class="keyword">in</span> specialty:</span><br><span class="line">            toolkit.register_tool_function(query_order)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ReActAgent(</span><br><span class="line">            name=name,</span><br><span class="line">            sys_prompt=<span class="string">f&quot;你是一名 <span class="subst">&#123;specialty&#125;</span> 专家,专业处理相关问题。&quot;</span>,</span><br><span class="line">            model=<span class="variable language_">self</span>.model,</span><br><span class="line">            formatter=DashScopeMultiAgentFormatter(),</span><br><span class="line">            memory=InMemoryMemory(),</span><br><span class="line">            toolkit=toolkit,</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">_create_supervisor</span>(<span class="params">self</span>) -&gt; ReActAgent:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;创建主管智能体&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> ReActAgent(</span><br><span class="line">            name=<span class="string">&quot;Supervisor&quot;</span>,</span><br><span class="line">            sys_prompt=<span class="string">&quot;你是一名客服主管,负责监控服务质量和汇总结果。&quot;</span>,</span><br><span class="line">            model=<span class="variable language_">self</span>.model,</span><br><span class="line">            formatter=DashScopeMultiAgentFormatter(),</span><br><span class="line">            memory=InMemoryMemory(),</span><br><span class="line">            toolkit=Toolkit(),</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">handle_customer</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        customer_id: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">        issue: <span class="built_in">str</span>,</span></span><br><span class="line"><span class="params">    </span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;处理客户问题的主流程</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        流程: 路由分类 → 分配专业智能体 → MsgHub 协作 → 主管审核</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            customer_id: 客户ID</span></span><br><span class="line"><span class="string">            issue: 客户问题描述</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            最终回复文本</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n<span class="subst">&#123;<span class="string">&#x27;=&#x27;</span> * <span class="number">60</span>&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;[新客户问题] <span class="subst">&#123;customer_id&#125;</span>: <span class="subst">&#123;issue&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span> * <span class="number">60</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 步骤1: 路由分类</span></span><br><span class="line">        route_response = <span class="keyword">await</span> <span class="variable language_">self</span>.router(</span><br><span class="line">            Msg(<span class="string">&quot;System&quot;</span>, <span class="string">f&quot;分析这个客户问题: <span class="subst">&#123;issue&#125;</span>&quot;</span>, <span class="string">&quot;user&quot;</span>),</span><br><span class="line">            structured_model=RouteDecision,</span><br><span class="line">        )</span><br><span class="line">        decision = route_response.metadata</span><br><span class="line">        category = decision.get(<span class="string">&quot;category&quot;</span>, <span class="string">&quot;general&quot;</span>)</span><br><span class="line">        priority = decision.get(<span class="string">&quot;priority&quot;</span>, <span class="string">&quot;medium&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n[路由决策] 类别: <span class="subst">&#123;category&#125;</span>, 优先级: <span class="subst">&#123;priority&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 步骤2: 分配给专业智能体</span></span><br><span class="line">        specialist_map = &#123;</span><br><span class="line">            <span class="string">&quot;technical&quot;</span>: <span class="variable language_">self</span>.tech_agent,</span><br><span class="line">            <span class="string">&quot;order&quot;</span>: <span class="variable language_">self</span>.order_agent,</span><br><span class="line">            <span class="string">&quot;complaint&quot;</span>: <span class="variable language_">self</span>.complaint_agent,</span><br><span class="line">            <span class="string">&quot;general&quot;</span>: <span class="variable language_">self</span>.tech_agent,</span><br><span class="line">        &#125;</span><br><span class="line">        specialist = specialist_map.get(category, <span class="variable language_">self</span>.tech_agent)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 步骤3: 多智能体协作处理 (MsgHub)</span></span><br><span class="line">        <span class="keyword">async</span> <span class="keyword">with</span> MsgHub(participants=[specialist, <span class="variable language_">self</span>.supervisor]):</span><br><span class="line">            <span class="comment"># 专业智能体处理问题</span></span><br><span class="line">            <span class="keyword">await</span> specialist(</span><br><span class="line">                Msg(</span><br><span class="line">                    <span class="string">&quot;System&quot;</span>,</span><br><span class="line">                    <span class="string">f&quot;请处理这个客户问题: <span class="subst">&#123;issue&#125;</span>&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;user&quot;</span>,</span><br><span class="line">                ),</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 主管审核并汇总(如果启用了 human_review hook,会自动触发人工审核)</span></span><br><span class="line">            final_response = <span class="keyword">await</span> <span class="variable language_">self</span>.supervisor(</span><br><span class="line">                Msg(</span><br><span class="line">                    <span class="string">&quot;System&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;请审核处理结果并提供最终回复。&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;user&quot;</span>,</span><br><span class="line">                ),</span><br><span class="line">                structured_model=ResolutionReport,</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> final_response.get_text_content()</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">main</span>() -&gt; <span class="literal">None</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;运行完整的多智能体客服系统&quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># 设置 enable_human_review=True 启用人工审核</span></span><br><span class="line">    system = CustomerSupportSystem(enable_human_review=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 模拟多个客户问题</span></span><br><span class="line">    customer_issues = [</span><br><span class="line">        (<span class="string">&quot;C001&quot;</span>, <span class="string">&quot;你们的 APP 老是崩溃。我根本没法用!&quot;</span>),</span><br><span class="line">        (<span class="string">&quot;C002&quot;</span>, <span class="string">&quot;我的订单 12345 发货了吗?什么时候到?&quot;</span>),</span><br><span class="line">        (</span><br><span class="line">            <span class="string">&quot;C003&quot;</span>,</span><br><span class="line">            <span class="string">&quot;我强烈抗议!产品质量太差了。我要求退款!&quot;</span>,</span><br><span class="line">        ),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> customer_id, issue <span class="keyword">in</span> customer_issues:</span><br><span class="line">        response = <span class="keyword">await</span> system.handle_customer(customer_id, issue)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n[最终回复]\n<span class="subst">&#123;response&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span> + <span class="string">&quot;-&quot;</span> * <span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">asyncio.run(main())</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><strong>结构化输出</strong> - 使用 Pydantic 模型让 LLM 返回可控格式的数据</li>
+<li><strong>MsgHub</strong> - 消息广播模式，让多个智能体在同一个上下文中讨论</li>
+<li><strong>Handoff</strong> - 任务委派模式，Orchestrator 分解任务并委派给 Worker</li>
+<li><strong>Hooks</strong> - 在智能体执行前后插入自定义逻辑，实现human-in-the-loop</li>
+</ol>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/04/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/AgentScope/QuickStart/"
+                                   title="AgentScope QuickStart"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">AgentScope QuickStart</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">环境搭建与单智能体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E5%AE%A2%E6%9C%8D%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">单个客服智能体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text">单智能体的局限性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E8%B7%AF%E7%94%B1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-text">智能路由与结构化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-text">什么是结构化输出?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E8%B7%AF%E7%94%B1%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B"><span class="nav-text">定义路由决策模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">创建路由智能体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-text">结构化输出的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="nav-text">多智能体协作模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MsgHub-%E6%B6%88%E6%81%AF%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%BC%8F"><span class="nav-text">MsgHub 消息广播模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handoff-%E4%BB%BB%E5%8A%A1%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F"><span class="nav-text">Handoff 任务委派模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-text">两种模式对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Human-in-the-Loop"><span class="nav-text">Human-in-the-Loop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Hook"><span class="nav-text">什么是 Hook?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hook-%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D"><span class="nav-text">Hook 函数签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%A0%B8-Hook"><span class="nav-text">实现人工审核 Hook</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%B3%BB%E7%BB%9F%E6%95%B4%E5%90%88"><span class="nav-text">完整系统整合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Nobody</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">环境搭建与单智能体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E5%AE%A2%E6%9C%8D%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">单个客服智能体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-text">单智能体的局限性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E8%B7%AF%E7%94%B1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-text">智能路由与结构化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-text">什么是结构化输出?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E8%B7%AF%E7%94%B1%E5%86%B3%E7%AD%96%E6%A8%A1%E5%9E%8B"><span class="nav-text">定义路由决策模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-text">创建路由智能体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-text">结构化输出的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E4%BD%9C%E6%A8%A1%E5%BC%8F"><span class="nav-text">多智能体协作模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MsgHub-%E6%B6%88%E6%81%AF%E5%B9%BF%E6%92%AD%E6%A8%A1%E5%BC%8F"><span class="nav-text">MsgHub 消息广播模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handoff-%E4%BB%BB%E5%8A%A1%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%BC%8F"><span class="nav-text">Handoff 任务委派模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="nav-text">两种模式对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Human-in-the-Loop"><span class="nav-text">Human-in-the-Loop</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Hook"><span class="nav-text">什么是 Hook?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hook-%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D"><span class="nav-text">Hook 函数签名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%A0%B8-Hook"><span class="nav-text">实现人工审核 Hook</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%B3%BB%E7%BB%9F%E6%95%B4%E5%90%88"><span class="nav-text">完整系统整合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- mathjax -->
+
+    
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+}
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

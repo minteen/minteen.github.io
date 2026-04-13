@@ -9,7 +9,7 @@
     
     <title>
         
-            Hexo捣鼓笔记 |
+            LangChain 结构化输出 |
         
         Build MySelf
     </title>
@@ -162,7 +162,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Hexo捣鼓笔记
+                        LangChain 结构化输出
                     </div>
                 
 
@@ -190,7 +190,7 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-04-07 00:00:00</span>
+                <span class="datetime">2026-03-09 10:00:00</span>
             </span>
 
             
@@ -200,7 +200,7 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></li>
+                            <li class="category-item"><a href="/categories/agent/">agent</a></li>
                         
                     
                 </ul>
@@ -227,12 +227,50 @@
                     
 
                     
-                         <h2 id="自定义代码块"><a href="#自定义代码块" class="headerlink" title="自定义代码块"></a>自定义代码块</h2><p>受到Obsidian中ad插件的启示，想在hexo博客中使用代码块代替<code>&lt;div class=???&gt;</code>的效果。例如将<code>ad-hide</code>自动转换为 <code>&lt;div class=hide&gt;</code>：</p>
-<p>在 <code>source/css/custom.css</code>中自定义样式：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 鼠标悬浮显示/隐藏效果 */</span></span><br><span class="line"><span class="selector-class">.ad-hide</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">  <span class="attribute">color</span>: transparent;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">transition</span>: color <span class="number">0.3s</span> ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ad-hide</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                         <h2 id="四种-Schema"><a href="#四种-Schema" class="headerlink" title="四种 Schema"></a>四种 Schema</h2><h3 id="Pydantic-模型"><a href="#Pydantic-模型" class="headerlink" title="Pydantic 模型"></a>Pydantic 模型</h3><blockquote>
+<p>带有字段验证的 <code>BaseModel</code> 子类</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ContactInfo</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个人的联系信息。&quot;&quot;&quot;</span></span><br><span class="line">    name: <span class="built_in">str</span> = Field(description=<span class="string">&quot;该人的姓名&quot;</span>)</span><br><span class="line">    email: <span class="built_in">str</span> = Field(description=<span class="string">&quot;该人的电子邮件地址&quot;</span>)</span><br><span class="line">    phone: <span class="built_in">str</span> = Field(description=<span class="string">&quot;该人的电话号码&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>以下脚本会自动识别<code>ad-xxx</code>并完成转换：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 将 ```ad-xxx 代码块转换为 div class=&quot;xxx&quot; 标签</span></span><br><span class="line"><span class="comment"> * 支持任意 ad- 前缀的代码块</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;before_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="comment">// 匹配 ```ad-xxx 代码块</span></span><br><span class="line">  <span class="comment">// 格式:</span></span><br><span class="line">  <span class="comment">// ```ad-xxx</span></span><br><span class="line">  <span class="comment">// 内容</span></span><br><span class="line">  <span class="comment">// ```</span></span><br><span class="line">  <span class="keyword">const</span> regex = <span class="regexp">/```ad-([a-zA-Z0-9_-]+)\n([\s\S]*?)\n```/g</span>;</span><br><span class="line"></span><br><span class="line">  data.<span class="property">content</span> = data.<span class="property">content</span>.<span class="title function_">replace</span>(regex, <span class="keyword">function</span>(<span class="params">match, className, content</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`&lt;div class=&quot;ad-<span class="subst">$&#123;className&#125;</span>&quot;&gt;\n<span class="subst">$&#123;content&#125;</span>\n&lt;/div&gt;`</span>;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;, <span class="number">1</span>); <span class="comment">// 设置优先级为 1，确保在其他过滤器之前执行</span></span><br></pre></td></tr></table></figure>
+<h3 id="数据类-Dataclasses"><a href="#数据类-Dataclasses" class="headerlink" title="数据类 (Dataclasses)"></a>数据类 (Dataclasses)</h3><blockquote>
+<p>带有类型注解的 Python 数据类。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@dataclass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContactInfo</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个人的联系信息。&quot;&quot;&quot;</span></span><br><span class="line">    name: <span class="built_in">str</span> <span class="comment"># 该人的姓名</span></span><br><span class="line">    email: <span class="built_in">str</span> <span class="comment"># 该人的电子邮件地址</span></span><br><span class="line">    phone: <span class="built_in">str</span> <span class="comment"># 该人的电话号码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="TypedDict"><a href="#TypedDict" class="headerlink" title="TypedDict"></a><strong>TypedDict</strong></h3><blockquote>
+<p>类型化字典类</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing_extensions <span class="keyword">import</span> TypedDict</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ContactInfo</span>(<span class="title class_ inherited__">TypedDict</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个人的联系信息。&quot;&quot;&quot;</span></span><br><span class="line">    name: <span class="built_in">str</span> <span class="comment"># 该人的姓名</span></span><br><span class="line">    email: <span class="built_in">str</span> <span class="comment"># 该人的电子邮件地址</span></span><br><span class="line">    phone: <span class="built_in">str</span> <span class="comment"># 该人的电话号码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JSON-Schema"><a href="#JSON-Schema" class="headerlink" title="JSON Schema"></a>JSON Schema</h3><blockquote>
+<p>带有 JSON 模式规范的字典</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">contact_info_schema = &#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;object&quot;</span>,</span><br><span class="line">    <span class="string">&quot;description&quot;</span>: <span class="string">&quot;一个人的联系信息。&quot;</span>,</span><br><span class="line">    <span class="string">&quot;properties&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;name&quot;</span>: &#123;<span class="string">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span>, <span class="string">&quot;description&quot;</span>: <span class="string">&quot;该人的姓名&quot;</span>&#125;,</span><br><span class="line">        <span class="string">&quot;email&quot;</span>: &#123;<span class="string">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span>, <span class="string">&quot;description&quot;</span>: <span class="string">&quot;该人的电子邮件地址&quot;</span>&#125;,</span><br><span class="line">        <span class="string">&quot;phone&quot;</span>: &#123;<span class="string">&quot;type&quot;</span>: <span class="string">&quot;string&quot;</span>, <span class="string">&quot;description&quot;</span>: <span class="string">&quot;该人的电话号码&quot;</span>&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;required&quot;</span>: [<span class="string">&quot;name&quot;</span>, <span class="string">&quot;email&quot;</span>, <span class="string">&quot;phone&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="响应格式-Response-Format"><a href="#响应格式-Response-Format" class="headerlink" title="响应格式(Response Format)"></a>响应格式(Response Format)</h2><ul>
+<li>**<code>ToolStrategy[StructuredResponseT]</code>**：使用 <strong>工具调用（tool calling）</strong> 实现结构化输出。</li>
+<li>**<code>ProviderStrategy[StructuredResponseT]</code>**：使用 <strong>提供商原生（provider-native）</strong> 的结构化输出功能。</li>
+<li><strong><code>type[StructuredResponseT]</code><strong>：</strong>模式类型（Schema type）</strong> - 会根据模型功能自动选择最佳策略。</li>
+<li>**<code>None</code>**：不进行结构化输出。</li>
+</ul>
+<p>可以从结果的”structured_response”键中看到结构化后的输出。</p>
+<blockquote>
+<p>一般情况下默认选择<code>ProviderStrategy</code>即可，如果模型提供商不支持该功能，Langchain会回退到<code>ToolStrategy</code>。</p>
+</blockquote>
+<h2 id="ToolStrategy-错误处理"><a href="#ToolStrategy-错误处理" class="headerlink" title="ToolStrategy 错误处理"></a><code>ToolStrategy</code> 错误处理</h2><p>使用 <strong><code>handle_errors</code></strong> 参数来自定义错误处理方式：</p>
+<ul>
+<li><p>自定义错误消息。如果 <code>handle_errors</code> 是一个字符串，智能体将始终使用固定的工具消息提示模型重试。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ToolStrategy(</span><br><span class="line">    schema=ProductRating,</span><br><span class="line">    handle_errors=<span class="string">&quot;请提供 1-5 之间的有效评分并包含评论。&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>处理多个异常类型</strong>：出现指定异常时重试，否则抛出异常</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ToolStrategy(</span><br><span class="line">    schema=ProductRating,</span><br><span class="line">    handle_errors=(ValueError, TypeError)  <span class="comment"># 在 ValueError 和 TypeError 时重试</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>自定义错误处理函数</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">custom_error_handler</span>(<span class="params">error: Exception</span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isinstance</span>(error, StructuredOutputValidationError):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;格式存在问题。请重试。&quot;</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="built_in">isinstance</span>(error, MultipleStructuredOutputsError):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;返回了多个结构化输出。请选择最相关的一个。&quot;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;错误: <span class="subst">&#123;<span class="built_in">str</span>(error)&#125;</span>&quot;</span></span><br><span class="line"></span><br><span class="line">ToolStrategy(</span><br><span class="line">    schema=ToolStrategy(<span class="type">Union</span>[ContactInfo, EventDetails]),</span><br><span class="line">    handle_errors=custom_error_handler</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>不进行错误处理</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">response_format = ToolStrategy(</span><br><span class="line">    schema=ProductRating,</span><br><span class="line">    handle_errors=<span class="literal">False</span>  <span class="comment"># 所有错误都抛出</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+</ul>
 
                     
                 </div>
@@ -256,14 +294,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2026/04/07/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E5%8C%BB%E7%96%97%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/%E5%85%B3%E9%94%AE%E8%AF%8D%E8%AF%86%E5%88%AB%E6%8A%80%E6%9C%AF/"
-                                   title="关键字识别技术"
+                                   href="/2026/03/09/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/LangChain/LangChain%20%E4%B8%AD%E9%97%B4%E4%BB%B6/"
+                                   title="LangChain 中间件"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">关键字识别技术</span>
+                                        <span class="post-nav-title-item text-ellipsis">LangChain 中间件</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -273,11 +311,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2026/03/09/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/LangChain/LangChain%20%E4%B8%AD%E9%97%B4%E4%BB%B6/"
-                                   title="LangChain 中间件"
+                                   href="/2026/03/05/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/RAG/%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/"
+                                   title="向量数据库"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">LangChain 中间件</span>
+                                        <span class="post-nav-title-item text-ellipsis">向量数据库</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -305,7 +343,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-text">自定义代码块</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D-Schema"><span class="nav-text">四种 Schema</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pydantic-%E6%A8%A1%E5%9E%8B"><span class="nav-text">Pydantic 模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB-Dataclasses"><span class="nav-text">数据类 (Dataclasses)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypedDict"><span class="nav-text">TypedDict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-Schema"><span class="nav-text">JSON Schema</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F-Response-Format"><span class="nav-text">响应格式(Response Format)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ToolStrategy-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-text">ToolStrategy 错误处理</span></a></li></ol>
     </div>
 </div>
 
@@ -436,7 +474,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-text">自定义代码块</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E7%A7%8D-Schema"><span class="nav-text">四种 Schema</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pydantic-%E6%A8%A1%E5%9E%8B"><span class="nav-text">Pydantic 模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB-Dataclasses"><span class="nav-text">数据类 (Dataclasses)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypedDict"><span class="nav-text">TypedDict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-Schema"><span class="nav-text">JSON Schema</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F-Response-Format"><span class="nav-text">响应格式(Response Format)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ToolStrategy-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-text">ToolStrategy 错误处理</span></a></li></ol>
     </div>
 </div>
 

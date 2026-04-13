@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Nobody">
+    
+    <title>
+        
+            LangChain 中间件 |
+        
+        Build MySelf
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"minteen.github.io","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Build MySelf","author":"Nobody","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"mathjax":{"enable":true,"version":"3.2.2"},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="stylesheet" href="/css/custom.css">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Build MySelf
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        LangChain 中间件
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Nobody</span>
+                                
+                                    <span class="author-badge">Lv2</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-03-09 11:00:00</span>
+            </span>
+
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/agent/">agent</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <blockquote>
+<p>中间件：控制并定制 Agent 执行的每一个步骤，更精细地控制 Agent 内部的执行流程。</p>
+</blockquote>
+<p><img   src="/image/Langchain%E4%B8%AD%E9%97%B4%E4%BB%B6.png" ><br>中间件的添加方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.agents <span class="keyword">import</span> create_agent</span><br><span class="line"><span class="keyword">from</span> langchain.agents.middleware <span class="keyword">import</span> SummarizationMiddleware, HumanInTheLoopMiddleware</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">agent = create_agent(</span><br><span class="line">    model=model,</span><br><span class="line">    tools=[...],</span><br><span class="line">    middleware=[SummarizationMiddleware(), HumanInTheLoopMiddleware()],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="预置中间件-Built-in-middleware"><a href="#预置中间件-Built-in-middleware" class="headerlink" title="预置中间件 (Built-in middleware)"></a>预置中间件 (Built-in middleware)</h2><ul>
+<li><p><code>SummarizationMiddleware</code>：在接近<strong>上下文窗口</strong>（token limits）限制时，自动对对话历史进行摘要。</p>
+<ul>
+<li><code>model</code>：<strong>字符串</strong>，用于生成摘要的模型。</li>
+<li><code>max_tokens_before_summary</code>：<strong>数字</strong>，触发摘要的 token 阈值。</li>
+<li><code>messages_to_keep</code>：**数字 (默认值：20)**，要保留的最新消息数量。</li>
+<li><code>summary_prompt</code>：<strong>字符串</strong>，自定义提示词模板。如果未指定，则使用内置模板。</li>
+</ul>
+</li>
+<li><p><code>Human-in-the-loop</code>：在工具执行之前，暂停代理执行以供人工批准、编辑或拒绝工具调用。</p>
+<ul>
+<li><code>interrupt_on</code>：**字典 (必需)**，工具名称到批准配置的映射。值可以是：<ul>
+<li><code>True</code>（使用默认配置中断）</li>
+<li><code>False</code>（自动批准）</li>
+<li><code>InterruptOnConfig</code> 对象<ul>
+<li><code>allowed_decisions</code>：<strong>字符串列表</strong>，允许的决定列表：<code>&quot;approve&quot;</code>、<code>&quot;edit&quot;</code> 或 <code>&quot;reject&quot;</code>。</li>
+<li><code>description</code>：<strong>字符串 | 可调用对象</strong>，用于自定义描述的静态字符串或可调用函数。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>description_prefix</code>：**字符串 (默认值：”Tool execution requires approval”)**，操作请求描述的前缀。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">agent = create_agent(</span><br><span class="line">    model=<span class="string">&quot;openai:gpt-4o&quot;</span>,</span><br><span class="line">    tools=[read_email_tool, send_email_tool],</span><br><span class="line">    checkpointer=InMemorySaver(),</span><br><span class="line">    middleware=[</span><br><span class="line">        HumanInTheLoopMiddleware(</span><br><span class="line">            interrupt_on=&#123;</span><br><span class="line">                <span class="comment"># 要求对发送邮件进行批准、编辑或拒绝</span></span><br><span class="line">                <span class="string">&quot;send_email_tool&quot;</span>：&#123;</span><br><span class="line">                    <span class="string">&quot;allowed_decisions&quot;</span>：[<span class="string">&quot;approve&quot;</span>, <span class="string">&quot;edit&quot;</span>, <span class="string">&quot;reject&quot;</span>],</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment"># 自动批准读取邮件</span></span><br><span class="line">                <span class="string">&quot;read_email_tool&quot;</span>：<span class="literal">False</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>AnthropicPromptCachingMiddleware</code>：通过使用 Anthropic 模型，缓存重复的提示词前缀以降低成本。</p>
+<ul>
+<li><code>ttl</code>：**字符串 (默认值：”5m”)**，缓存内容的存活时间 (Time to live)。有效值：<code>&quot;5m&quot;</code> 或 <code>&quot;1h&quot;</code>。</li>
+<li><code>min_messages_to_cache</code>：**数字 (默认值：0)**，开始缓存之前的最小消息数量。</li>
+<li><code>unsupported_model_behavior</code>：**字符串 (默认值：”warn”)**，使用非 Anthropic 模型时的行为。选项：<code>&quot;ignore&quot;</code>、<code>&quot;warn&quot;</code> 或 <code>&quot;raise&quot;</code>。</li>
+</ul>
+</li>
+<li><p><code>ModelCallLimitMiddleware</code>：限制模型调用的次数，以防止无限循环或成本过高。</p>
+<ul>
+<li><code>thread_limit</code>：<strong>数字</strong>，线程中所有运行的最大模型调用次数。默认为无限制。</li>
+<li><code>run_limit</code>：<strong>数字</strong>，单次调用中最大模型调用次数。默认为无限制。</li>
+<li><code>exit_behavior</code>：**字符串 (默认值：”end”)**，达到限制时的行为。选项：<code>&quot;end&quot;</code>（优雅终止）或 <code>&quot;error&quot;</code>（引发异常）。</li>
+</ul>
+</li>
+<li><p><code>ToolCallLimitMiddleware</code>：限制特定工具或所有工具的调用次数。</p>
+<ul>
+<li><code>tool_name</code>：<strong>字符串</strong>，要限制的特定工具。如果未提供，则限制适用于所有工具。</li>
+<li><code>thread_limit</code>：<strong>数字</strong>，线程中所有运行的最大工具调用次数。默认为无限制。</li>
+<li><code>run_limit</code>：<strong>数字</strong>，单次调用中最大工具调用次数。默认为无限制。</li>
+<li><code>exit_behavior</code>：**字符串 (默认值：”end”)**，达到限制时的行为。选项：<code>&quot;end&quot;</code>（优雅终止）或 <code>&quot;error&quot;</code>（引发异常）。</li>
+</ul>
+</li>
+<li><p><code>ModelFallbackMiddleware</code>：当主要模型失败时，自动回退到替代模型。</p>
+<ul>
+<li><code>first_model</code>：**字符串 | BaseChatModel (必需)**，主要模型失败时尝试的第一个回退模型。可以是模型字符串（例如，<code>&quot;openai:gpt-4o-mini&quot;</code>）或 <code>BaseChatModel</code> 实例。</li>
+<li><code>*additional_models</code>：<strong>字符串 | BaseChatModel</strong>，如果先前的模型失败，则按顺序尝试的其他回退模型。</li>
+</ul>
+</li>
+<li><p><code>PIIMiddleware</code>：检测和处理对话中的<strong>个人身份信息</strong>（Personally Identifiable Information, PII），适用于任何处理<strong>敏感用户数据</strong>的应用。</p>
+<ul>
+<li><code>pii_type</code>：**字符串 (必需)**，要检测的 PII 类型。可以是内置类型（<code>email</code>、<code>credit_card</code>、<code>ip</code>、<code>mac_address</code>、<code>url</code>）或自定义类型名称。</li>
+<li><code>strategy</code>：**字符串 (默认值：”redact”)**，处理检测到的 PII 的方式。选项：<ul>
+<li><code>&quot;block&quot;</code>：检测到时引发异常</li>
+<li><code>&quot;redact&quot;</code>：替换为 <code>[REDACTED_TYPE]</code></li>
+<li><code>&quot;mask&quot;</code>：部分掩盖（例如，<code>****-****-****-1234</code>）</li>
+<li><code>&quot;hash&quot;</code>：替换为确定性哈希</li>
+</ul>
+</li>
+<li><code>detector</code>：<strong>函数 | 正则表达式</strong>，自定义检测函数或正则表达式模式。如果未提供，则使用 PII 类型的内置检测器。</li>
+<li><code>apply_to_input</code>：**布尔值 (默认值：True)**，在模型调用前检查用户消息。</li>
+<li><code>apply_to_output</code>：**布尔值 (默认值：False)**，在模型调用后检查 AI 消息。</li>
+<li><code>apply_to_tool_results</code>：**布尔值 (默认值：False)**，在执行后检查工具结果消息。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">agent = create_agent(</span><br><span class="line">    model=<span class="string">&quot;openai:gpt-4o&quot;</span>,</span><br><span class="line">    tools=[...],</span><br><span class="line">    middleware=[</span><br><span class="line">        <span class="comment"># 涂改用户输入中的电子邮件</span></span><br><span class="line">        PIIMiddleware(<span class="string">&quot;email&quot;</span>, strategy=<span class="string">&quot;redact&quot;</span>, apply_to_input=<span class="literal">True</span>),</span><br><span class="line">        <span class="comment"># 掩盖信用卡（显示后 4 位）</span></span><br><span class="line">        PIIMiddleware(<span class="string">&quot;credit_card&quot;</span>, strategy=<span class="string">&quot;mask&quot;</span>, apply_to_input=<span class="literal">True</span>),</span><br><span class="line">        <span class="comment"># 带有正则表达式的自定义 PII 类型</span></span><br><span class="line">        PIIMiddleware(</span><br><span class="line">            <span class="string">&quot;api_key&quot;</span>,</span><br><span class="line">            detector=<span class="string">r&quot;sk-[a-zA-Z0-9]&#123;32&#125;&quot;</span>,</span><br><span class="line">            strategy=<span class="string">&quot;block&quot;</span>,  <span class="comment"># 如果检测到，则引发错误</span></span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>TodoListMiddleware</p>
+<ul>
+<li><code>system_prompt</code>：<strong>字符串</strong>，用于指导待办事项使用的自定义系统提示词。如果未指定，则使用内置提示词。</li>
+<li><code>tool_description</code>：<strong>字符串</strong>，<code>write_todos</code> 工具的自定义描述。如果未指定，则使用内置描述。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">agent = create_agent(</span><br><span class="line">    model=<span class="string">&quot;openai:gpt-4o&quot;</span>,</span><br><span class="line">    tools=[...],</span><br><span class="line">    middleware=[TodoListMiddleware()],</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">result = agent.invoke(&#123;<span class="string">&quot;messages&quot;</span>：[HumanMessage(<span class="string">&quot;Help me refactor my codebase&quot;</span>)]&#125;)</span><br><span class="line"><span class="built_in">print</span>(result[<span class="string">&quot;todos&quot;</span>])  <span class="comment"># 带有状态跟踪的待办事项数组</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>LLMToolSelectorMiddleware：在调用主模型之前，使用 LLM 智能地选择<strong>相关工具</strong>。适用于工具过多的情景，提高模型焦点和准确性。</p>
+<ul>
+<li><code>model</code>：<strong>字符串 | BaseChatModel</strong>，用于工具选择的模型。可以是模型字符串或 <code>BaseChatModel</code> 实例。默认为代理的主模型。</li>
+<li><code>system_prompt</code>：<strong>字符串</strong>，给选择模型的指令。如果未指定，则使用内置提示词。</li>
+<li><code>max_tools</code>：<strong>数字</strong>，要选择的最大工具数量。默认为无限制。</li>
+<li><code>always_include</code>：<strong>字符串列表</strong>，始终包含在选择中的工具名称列表。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">agent = create_agent(</span><br><span class="line">    model=<span class="string">&quot;openai:gpt-4o&quot;</span>,</span><br><span class="line">    tools=[tool1, tool2, tool3, tool4, tool5, ...],  <span class="comment"># 许多工具</span></span><br><span class="line">    middleware=[</span><br><span class="line">        LLMToolSelectorMiddleware(</span><br><span class="line">            model=<span class="string">&quot;openai:gpt-4o-mini&quot;</span>,  <span class="comment"># 使用更便宜的模型进行选择</span></span><br><span class="line">            max_tools=<span class="number">3</span>,  <span class="comment"># 限制为 3 个最相关的工具</span></span><br><span class="line">            always_include=[<span class="string">&quot;search&quot;</span>],  <span class="comment"># 始终包含某些工具</span></span><br><span class="line">        ),</span><br><span class="line">    ],</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>ToolRetryMiddleware</code>：使用可配置的<strong>指数回退</strong>自动重试失败的工具调用。</p>
+<ul>
+<li><code>max_retries</code>：**数字 (默认值：2)**，初始调用后的最大重试次数（默认总共 3 次尝试）。</li>
+<li><code>tools</code>：<strong>BaseTool | 字符串列表</strong>，可选的工具列表或工具名称，用于应用重试逻辑。如果为 <code>None</code>，则应用于所有工具。</li>
+<li><code>retry_on</code>：**异常类型元组 | 可调用对象 (默认值：(Exception,))**，要么是重试的异常类型元组，要么是接受异常并返回 <code>True</code> 表示应重试的可调用对象。</li>
+<li><code>on_failure</code>：**字符串 | 可调用对象 (默认值：”return_message”)**，所有重试耗尽时的行为。选项：<ul>
+<li><code>&quot;return_message&quot;</code> 返回带有错误详细信息的 ToolMessage（允许 LLM 处理失败）</li>
+<li><code>&quot;raise&quot;</code> 重新引发异常（停止代理执行）</li>
+<li>自定义可调用对象 - 接受异常并返回用于 ToolMessage 内容的字符串的函数</li>
+</ul>
+</li>
+<li><code>backoff_factor</code>：**数字 (默认值：2.0)**，指数回退的乘数。每次重试等待 <code>initial_delay * (backoff_factor ** retry_number)</code> 秒。设置为 0.0 表示恒定延迟。</li>
+<li><code>initial_delay</code>：**数字 (默认值：1.0)**，第一次重试前的初始延迟（秒）。</li>
+<li><code>max_delay</code>：**数字 (默认值：60.0)**，重试之间的最大延迟（秒）（限制指数回退的增长）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="自定义中间件-Custom-middleware"><a href="#自定义中间件-Custom-middleware" class="headerlink" title="自定义中间件 (Custom middleware)"></a><a class="link"   target="_blank" rel="noopener" href="https://langchain-doc.cn/v1/python/langchain/middleware.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6-custom-middleware" >自定义中间件 (Custom middleware)<i class="fas fa-external-link-alt"></i></a></h2><h3 id="基于装饰器-Decorator-based"><a href="#基于装饰器-Decorator-based" class="headerlink" title="基于装饰器 (Decorator-based)"></a>基于装饰器 (Decorator-based)</h3><ul>
+<li>节点式：在特定的执行点运行<ul>
+<li><code>@before_agent</code>：代理启动前（每次调用一次）</li>
+<li><code>@before_model</code>：每次模型调用前</li>
+<li><code>@after_model</code>：每次模型响应后</li>
+<li><code>@after_agent</code>：代理完成时（每次调用最多一次）</li>
+</ul>
+</li>
+<li>包装式：拦截并控制执行<ul>
+<li><code>@wrap_model_call</code></li>
+<li><code>@wrap_tool_call</code></li>
+</ul>
+</li>
+<li><strong>便利装饰器</strong><ul>
+<li>@dynamic_prompt 生成动态系统提示词</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 节点式 (Node-style)：模型调用前的日志记录</span></span><br><span class="line"><span class="meta">@before_model</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log_before_model</span>(<span class="params">state: AgentState, runtime: Runtime</span>) -&gt; <span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="type">Any</span>] | <span class="literal">None</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;About to call model with <span class="subst">&#123;<span class="built_in">len</span>(state[<span class="string">&#x27;messages&#x27;</span>])&#125;</span> messages&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 节点式 (Node-style)：模型调用后的验证</span></span><br><span class="line"><span class="meta">@after_model(<span class="params">can_jump_to=[<span class="string">&quot;end&quot;</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">validate_output</span>(<span class="params">state: AgentState, runtime: Runtime</span>) -&gt; <span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="type">Any</span>] | <span class="literal">None</span>:</span><br><span class="line">    last_message = state[<span class="string">&quot;messages&quot;</span>][-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&quot;BLOCKED&quot;</span> <span class="keyword">in</span> last_message.content:</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="string">&quot;messages&quot;</span>: [AIMessage(<span class="string">&quot;I cannot respond to that request.&quot;</span>)],</span><br><span class="line">            <span class="string">&quot;jump_to&quot;</span>: <span class="string">&quot;end&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 包装式 (Wrap-style)：重试逻辑</span></span><br><span class="line"><span class="meta">@wrap_model_call</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">retry_model</span>(<span class="params"></span></span><br><span class="line"><span class="params">    request: ModelRequest,</span></span><br><span class="line"><span class="params">    handler: <span class="type">Callable</span>[[ModelRequest], ModelResponse],</span></span><br><span class="line"><span class="params"></span>) -&gt; ModelResponse:</span><br><span class="line">    <span class="keyword">for</span> attempt <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">return</span> handler(request)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="keyword">if</span> attempt == <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">raise</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;Retry <span class="subst">&#123;attempt + <span class="number">1</span>&#125;</span>/3 after error: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="基于类-Class-based"><a href="#基于类-Class-based" class="headerlink" title="基于类 (Class-based)"></a><strong>基于类 (Class-based)</strong></h3><ul>
+<li><p>节点式钩子 (Node-style hooks)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MessageLimitMiddleware</span>(<span class="title class_ inherited__">AgentMiddleware</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, max_messages: <span class="built_in">int</span> = <span class="number">50</span></span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line">        <span class="variable language_">self</span>.max_messages = max_messages</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">before_model</span>(<span class="params">self, state: AgentState, runtime: Runtime</span>) -&gt; <span class="built_in">dict</span>[<span class="built_in">str</span>, <span class="type">Any</span>] | <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(state[<span class="string">&quot;messages&quot;</span>]) == <span class="variable language_">self</span>.max_messages:</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                <span class="string">&quot;messages&quot;</span>: [AIMessage(<span class="string">&quot;Conversation limit reached.&quot;</span>)],</span><br><span class="line">                <span class="string">&quot;jump_to&quot;</span>: <span class="string">&quot;end&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>包装式钩子 (Wrap-style hooks)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> langchain.agents.middleware <span class="keyword">import</span> AgentMiddleware, ModelRequest, ModelResponse</span><br><span class="line"><span class="keyword">from</span> langchain.chat_models <span class="keyword">import</span> init_chat_model</span><br><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">Callable</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">DynamicModelMiddleware</span>(<span class="title class_ inherited__">AgentMiddleware</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrap_model_call</span>(<span class="params"></span></span><br><span class="line"><span class="params">        self,</span></span><br><span class="line"><span class="params">        request: ModelRequest,</span></span><br><span class="line"><span class="params">        handler: <span class="type">Callable</span>[[ModelRequest], ModelResponse],</span></span><br><span class="line"><span class="params">    </span>) -&gt; ModelResponse:</span><br><span class="line">        <span class="comment"># 根据对话长度使用不同的模型</span></span><br><span class="line">        <span class="comment"># ...</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/04/07/%E5%89%8D%E7%AB%AF/%E5%80%92%E8%85%BEHexo/"
+                                   title="Hexo捣鼓笔记"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Hexo捣鼓笔记</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/03/09/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/LangChain/LangChain%20%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/"
+                                   title="LangChain 结构化输出"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">LangChain 结构化输出</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6-Built-in-middleware"><span class="nav-text">预置中间件 (Built-in middleware)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6-Custom-middleware"><span class="nav-text">自定义中间件 (Custom middleware)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E8%A3%85%E9%A5%B0%E5%99%A8-Decorator-based"><span class="nav-text">基于装饰器 (Decorator-based)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%B1%BB-Class-based"><span class="nav-text">基于类 (Class-based)</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Nobody</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E7%BD%AE%E4%B8%AD%E9%97%B4%E4%BB%B6-Built-in-middleware"><span class="nav-text">预置中间件 (Built-in middleware)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6-Custom-middleware"><span class="nav-text">自定义中间件 (Custom middleware)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E8%A3%85%E9%A5%B0%E5%99%A8-Decorator-based"><span class="nav-text">基于装饰器 (Decorator-based)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%B1%BB-Class-based"><span class="nav-text">基于类 (Class-based)</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- mathjax -->
+
+    
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+}
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
